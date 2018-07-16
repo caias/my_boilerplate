@@ -1,0 +1,26 @@
+/// 텍스트 세로 정렬
+/// @access public
+/// @group Mixin
+/// @param {$arg} $width [null] - 높이값
+/// @param {$arg} $height [null] - 행간
+/// @example scss - Scss
+///		.foo {
+///			@include vtext(20px)
+///		}
+///		.bar{
+///			@include vtext(20px,18px)
+///		}
+/// @example css - Compile css
+///   .foo {
+///		  height:20px;
+///     line-height:20px;
+///   }
+///   .bar {
+///		  height:20px;
+///     line-height:18px;
+///   }
+
+@mixin vtext($height, $line-height:$height){
+  height:$height;
+  line-height:$line-height;
+}

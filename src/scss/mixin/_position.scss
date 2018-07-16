@@ -1,0 +1,52 @@
+/// position attribute
+/// @access public
+/// @group Mixin
+/// @param {String} $position - `relative`, `absolute` or `fixed`
+/// @param {Length} $top [null] - Top offset
+/// @param {Length} $right [null] - Right offset
+/// @param {Length} $bottom [null] - Bottom offset
+/// @param {Length} $left [null] - Left offset
+/// @example scss - Scss
+///		.foo {
+///			@include absolute($left:0,$top:0);
+///		}
+///		.bar{
+///			@include relative();
+///		}
+///		.baz{
+///			@include fixed($left:50%,$top:50%);
+///		}
+/// @example css - Compile css
+///   .foo {
+///		 position:absolute;
+///    left:0;
+///    top:0;
+///   }
+///   .bar {
+///     position:relative;
+///   }
+///   .baz{
+///     position:fixed;
+///     left:50%;
+///     top:50%;
+///   }
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute($args...){
+  @include position(absolute, $args...);
+}
+
+@mixin relative($args...){
+  @include position(relative, $args...);
+}
+
+@mixin fixed($args...){
+  @include position(fixed, $args...);
+}

@@ -1,0 +1,38 @@
+@mixin get-list($map, $keys...){
+  $i: 1;
+  $length: length($keys);
+  @while $length >= $i{
+    $map: map-get($map, nth($keys, $i));
+    $i: $i + 1;
+  }
+
+  @each $property, $value in $map {
+    @if type-of($value) != map {
+     #{$property}: $value;
+    }
+  }
+};
+
+@mixin get-nested-list($map, $tag:null, $suffix:null){
+  @each $property , $value in $map {
+    @if $tag == null {
+      &.#{$suffix}#{$property}{
+        @include get-list($map , $property);
+      }
+    }@else if type-of($tag) == 'list'{
+      &.#{$suffix}#{$property}{
+        > #{nth($tag ,1)}{
+          > #{nth($tag ,2)}{
+            @include get-list($map , $property);
+          }
+        }
+      }
+    }@else{
+      &.#{$suffix}#{$property}{
+        > #{$tag}{
+          @include get-list($map , $property);
+        }
+      }
+    }
+  }
+}

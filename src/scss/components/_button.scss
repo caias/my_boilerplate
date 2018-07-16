@@ -1,0 +1,25 @@
+.round_btn{
+  padding:0 20px;
+  min-width:109px;
+  box-sizing:border-box;
+  @include vtext(40px, 38px);
+  @include radius(20px);
+  font-size:15px;
+  font-weight: bold;
+  &.blue{
+    color:color(white,1);
+    background-color:color(blue,1);
+  }
+}
+
+.btn_gray_s{
+  background-color:color(black,7);
+  font-size:13px;
+  width:69px;
+  vertical-align: middle;
+  font-weight: bold;
+  color:color(white,1);
+  text-align: center;
+  @include vtext(30px);
+  @include radius(15px);
+}

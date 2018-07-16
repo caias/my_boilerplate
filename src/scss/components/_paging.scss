@@ -1,0 +1,42 @@
+@mixin paging($margin-top:16px){
+  margin-top:$margin-top;
+  text-align:center;
+  font-size:0;
+  font-weight:bold;
+  line-height:30px;
+  a{
+    font-size:15px;
+    color:color(black,1);
+    @include size(30px);
+    display:inline-block;
+    vertical-align: middle;
+    margin-left:10px;
+    &:first-child{
+      margin-left:0;
+    }
+    &.first{
+      @include sprite($btn_paging_first);
+    }
+    &.prev{
+      @include sprite($btn_paging_prev);
+      margin-right:10px;
+    }
+    &.next{
+      @include sprite($btn_paging_next);
+      margin-left:20px;
+    }
+    &.last{
+      @include sprite($btn_paging_last);
+    }
+  }
+  strong{
+    font-size:15px;
+    display:inline-block;
+    vertical-align:middle;
+    margin-left:10px;
+    @include radius(50%);
+    @include size(30px);
+    color:color(white,1);
+    background-color:color(blue,1);
+  }
+}
