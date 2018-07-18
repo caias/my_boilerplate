@@ -1,6 +1,12 @@
-/// Remove the unit of a length
+/// 단위값 제거
+/// @access public
+/// @group Function
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
+/// @example scss - Scss
+///   $width : 42px;
+///   $value : strip-unit($width);
+///   $value = 42
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
     @return $number / ($number * 0 + 1);

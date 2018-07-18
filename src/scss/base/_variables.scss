@@ -34,5 +34,12 @@ $palettes: (
 
 
 // $img_url : '../../dist/images/sprite';
-$img_url : '/dist/images/sprite';
-$sprite : '#{$img_url}/img_sprite.png';
+$img_url : '/dist/images';
+$sprite : '#{$img_url}/sprite/img_sprite.png';
+
+//border basic style
+$bd-basic-color:color(black,2) !default;
+$bd-basic-style:solid !default;
+$bd-basic-width:1 !default;
+
+$sqrt2 : 1.41421356237;

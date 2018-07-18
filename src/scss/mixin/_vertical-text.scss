@@ -1,8 +1,9 @@
 /// 텍스트 세로 정렬
 /// @access public
 /// @group Mixin
-/// @param {$arg} $width [null] - 높이값
-/// @param {$arg} $height [null] - 행간
+/// @param {$arg} $height [null] - 높이값
+/// @param {$arg} $line-height [$height] - 행간
+/// @param {$arg} $width [null] - 넓이값 ( 넓이값이 필요한 경우))
 /// @example scss - Scss
 ///		.foo {
 ///			@include vtext(20px)
@@ -20,7 +21,10 @@
 ///     line-height:18px;
 ///   }
 
-@mixin vtext($height, $line-height:$height){
+@mixin vtext($height, $line-height:$height, $width:null){
   height:$height;
   line-height:$line-height;
+  @if($width){
+    width:$width;
+  }
 }

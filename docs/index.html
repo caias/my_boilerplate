@@ -1,5 +1,124 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Scss guide by lkw - v1.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Scss guide by lkw - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>UI-Devloper resource</p>
-"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Scss guide by lkw - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="mixin"><a href="#mixin">mixin</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="mixin-mixin"><a href="#mixin-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="ellipsis" data-type="mixin"><a href="#mixin-mixin-ellipsis">ellipsis</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="grid" data-type="mixin"><a href="#mixin-mixin-grid">grid</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="position" data-type="mixin"><a href="#mixin-mixin-position">position</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="radius" data-type="mixin"><a href="#mixin-mixin-radius">radius</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="size" data-type="mixin"><a href="#mixin-mixin-size">size</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="vtext" data-type="mixin"><a href="#mixin-mixin-vtext">vtext</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="str-replace" data-type="function"><a href="#undefined-function-str-replace">str-replace</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="strip-unit" data-type="function"><a href="#undefined-function-strip-unit">strip-unit</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="mixin"><div class="container">mixin</div></h1><section class="main__sub-section" id="mixin-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-mixin-ellipsis"><h3 class="item__heading"><a class="item__name" href="#mixin-ellipsis">ellipsis</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin ellipsis($lines: 1, $line-height: null) { 
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Scss guide by lkw - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="extend"><a href="#extend">extend</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="extend-placeholder"><a href="#extend-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="extend" data-name="clearfix" data-type="placeholder"><a href="#extend-placeholder-clearfix">clearfix</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="function"><a href="#function">function</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="function-function"><a href="#function-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="function" data-name="color" data-type="function"><a href="#function-function-color">color</a></li><li class="sidebar__item sassdoc__item" data-group="function" data-name="str-replace" data-type="function"><a href="#function-function-str-replace">str-replace</a></li><li class="sidebar__item sassdoc__item" data-group="function" data-name="strip-unit" data-type="function"><a href="#function-function-strip-unit">strip-unit</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="mixin"><a href="#mixin">mixin</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="mixin-mixin"><a href="#mixin-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="bd" data-type="mixin"><a href="#mixin-mixin-bd">bd</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="bullet" data-type="mixin"><a href="#mixin-mixin-bullet">bullet</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="ellipsis" data-type="mixin"><a href="#mixin-mixin-ellipsis">ellipsis</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="grid" data-type="mixin"><a href="#mixin-mixin-grid">grid</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="ic-x" data-type="mixin"><a href="#mixin-mixin-ic-x">ic-x</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="withbtn" data-type="mixin"><a href="#mixin-mixin-withbtn">withbtn</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="position" data-type="mixin"><a href="#mixin-mixin-position">position</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="radius" data-type="mixin"><a href="#mixin-mixin-radius">radius</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="size" data-type="mixin"><a href="#mixin-mixin-size">size</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="sr-only" data-type="mixin"><a href="#mixin-mixin-sr-only">sr-only</a></li><li class="sidebar__item sassdoc__item" data-group="mixin" data-name="vtext" data-type="mixin"><a href="#mixin-mixin-vtext">vtext</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="extend"><div class="container">extend</div></h1><section class="main__sub-section" id="extend-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="extend-placeholder-clearfix"><h3 class="item__heading"><a class="item__name" href="#placeholder-clearfix">clearfix</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%clearfix { 
+  &amp;::after {
+    content: &#39;&#39;;
+    display: table;
+    clear: both;
+  }
+ }" data-collapsed="%clearfix { ... }"><code>%clearfix { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>float 해제</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.foo {
+	@extend %clearfix
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.foo::after {
+ content:&#39;&#39;;
+  display:table;
+  clear:both;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-mixin-grid"><code>grid</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>bootstrap</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="function"><div class="container">function</div></h1><section class="main__sub-section" id="function-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="function-function-color"><h3 class="item__heading"><a class="item__name" href="#function-color">color</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function color($color: 1, $value: null) { 
+    @return map-get(map-get($palettes, $color), $value);
+ }" data-collapsed="@function color($color: 1, $value: null) { ... }"><code>@function color($color: 1, $value: null) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>colorpicker</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>color pallete</p></td><td data-label="type"><code>$map</code></td><td data-label="default"><code>1</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>color값</p></td><td data-label="type"><code>$map value</code></td><td data-label="default"><code>null</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code> $palettes : (
+    white:(
+      1 : #fff
+    ),
+    black:(
+      1 : #000,
+      2 : #555
+    ),
+    red:(
+      1 : #ed1c24
+    ),
+  );
+.foo {
+	color:color(black,1);
+}
+.bar {
+	color:color(red,1);
+}
+.baz {
+	color:color(black,2);
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.foo{
+	 color:#000;
+ }
+.bar{
+	 color:#ed1c24;
+ }
+.baz{
+	 color:#555;
+ }</code></pre></div></section><section class="main__item container item" id="function-function-str-replace"><h3 class="item__heading"><a class="item__name" href="#function-str-replace">str-replace</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function str-replace($string, $search, $replace) { 
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+ }" data-collapsed="@function str-replace($string, $search, $replace) { ... }"><code>@function str-replace($string, $search, $replace) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>String replace</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$string</code></th><td data-label="desc"><p>Initial string</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$search</code></th><td data-label="desc"><p>Substring to replace</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$replace</code></th><td data-label="desc"><p>(&#39;&#39;) - New value</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code> &mdash;<p>Updated string</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.selector {
+  $string: &#39;aaaa&#39;;
+  content: str-replace($string, &#39;a&#39;, &#39;b&#39;);
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.selector {
+  content: &quot;bbbb&quot;;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Hugo Giraudel</p></li></ul></section><section class="main__item container item" id="function-function-strip-unit"><h3 class="item__heading"><a class="item__name" href="#function-strip-unit">strip-unit</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function strip-unit($number) { 
+  @if type-of($number) == &#39;number&#39; and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+ }" data-collapsed="@function strip-unit($number) { ... }"><code>@function strip-unit($number) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>단위값 제거</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$number</code></th><td data-label="desc"><p>Number to remove unit from</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>Unitless number</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>$width : 42px;
+$value : strip-unit($width);
+$value = 42</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="mixin"><div class="container">mixin</div></h1><section class="main__sub-section" id="mixin-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-mixin-bd"><h3 class="item__heading"><a class="item__name" href="#mixin-bd">bd</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin bd($bd-basic-color: #999, $bd-basic-width: 1px, $bd-basic-style: solid) { 
+	@if length($bd-width) &gt; 1 {
+		border-style:$bd-style;
+		border-color:$bd-color;
+		border-width:$bd-width;
+	}@else {
+		border:$bd-width * 1px $bd-style $bd-color;
+	}
+ }" data-collapsed="@mixin bd($bd-basic-color: #999, $bd-basic-width: 1px, $bd-basic-style: solid) { ... }"><code>@mixin bd($bd-basic-color: #999, $bd-basic-width: 1px, $bd-basic-style: solid) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>border-style basic &amp; multi (프로젝트별 공통 블릿에 따라 Default값 변경)</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$bd-basic-color</code></th><td data-label="desc"><p>border-color</p></td><td data-label="type"><code>Value</code></td><td data-label="default"><code>#999</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$bd-basic-width</code></th><td data-label="desc"><p>border-width</p></td><td data-label="type"><code>Value</code></td><td data-label="default"><code>1px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$bd-basic-style</code></th><td data-label="desc"><p>border-style</p></td><td data-label="type"><code>Value</code></td><td data-label="default"><code>solid</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.foo {
+	@include bd()
+}
+.bar {
+	@include bd($bd-width:2px 0 0 2px);
+}
+.baz {
+	@include bd(color(red,1),$bd-width:2px 0);
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.foo{
+	 border:1px solid #999;
+ }
+.bar{
+	 border-style:solid;
+	 border-color:#999;
+	 border-width:2px 0 0 2px;
+ }
+.baz{
+	 border-style:solid;
+	 border-color:#ed1c24;
+	 border-width:2px 0;
+ }</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>LKW</p></li></ul></section><section class="main__item container item" id="mixin-mixin-bullet"><h3 class="item__heading"><a class="item__name" href="#mixin-bullet">bullet</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin bullet($size: 2, $color: #999, $lineHeight: 20, $pdl: 10, $radius: 50%) { 
+	position:relative;
+	padding-left:$pdl;
+	line-height:$lineHeight;
+	&amp;:before{
+		content:&#39;&#39;;
+		@include size($size);
+		@include absolute($top:($lineHeight - $size - 1) / 2 , $left:0);
+		@include radius($radius);
+		background-color:$color;
+	}
+ }" data-collapsed="@mixin bullet($size: 2, $color: #999, $lineHeight: 20, $pdl: 10, $radius: 50%) { ... }"><code>@mixin bullet($size: 2, $color: #999, $lineHeight: 20, $pdl: 10, $radius: 50%) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>bullet mixin (프로젝트별 공통 블릿에 따라 Default값 변경)</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>buiiet size</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>2</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>bullet backround color</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>#999</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$lineHeight</code></th><td data-label="desc"><p>bullet이 들어가는 텍스트 행간</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>20</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$pdl</code></th><td data-label="desc"><p>padding-left값</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>10</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$radius</code></th><td data-label="desc"><p>border-radius5값</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>50%</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.foo {
+	@include bullet()
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.foo{
+	 position:relative;
+	 padding-left:10px;
+	 line-height:20px;
+	 &amp;:before{
+		 content:&#39;&#39;;
+		 width:2px;
+		 height:2px;
+		 position:absolute;
+		 left:0;
+		 top:7.5px;
+		 border-radius:50%;
+		 background-color:#999;
+	 }
+ }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-mixin-size"><code>size</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-mixin-radius"><code>radius</code></a></li></ul></section><section class="main__item container item" id="mixin-mixin-ellipsis"><h3 class="item__heading"><a class="item__name" href="#mixin-ellipsis">ellipsis</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin ellipsis($lines: 1, $line-height: null) { 
+	width:100%;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	@if ($lines &gt; 1){
@@ -30,13 +149,13 @@
  -webkit-line-clamp: 2;
  text-overflow: ellipsis;
  -webkit-box-orient: vertical;
-}</code></pre></div></section><section class="main__item container item" id="mixin-mixin-grid"><h3 class="item__heading"><a class="item__name" href="#mixin-grid">grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin grid($grid-count: null, $grid-space: null) { 
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>LKW</p></li></ul></section><section class="main__item container item" id="mixin-mixin-grid"><h3 class="item__heading"><a class="item__name" href="#mixin-grid">grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin grid($grid-count: null, $grid-space: null) { 
   &amp;.grid0#{$grid-count}{
+    @extend %clearfix;
     width:auto;
     @if($grid-space){
       margin-left:- #{$grid-space};
     }
-    overflow:hidden;
     &gt; .grid{
       float: left;
       width:(100% / $grid-count);
@@ -56,7 +175,106 @@
     padding-left:10px;
     box-sizing:border-box;
   }
-}</code></pre></div></section><section class="main__item container item" id="mixin-mixin-position"><h3 class="item__heading"><a class="item__name" href="#mixin-position">position</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) { 
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#extend-placeholder-clearfix"><code>clearfix</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>LKW</p></li></ul></section><section class="main__item container item" id="mixin-mixin-ic-x"><h3 class="item__heading"><a class="item__name" href="#mixin-ic-x">ic-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin ic-x($size: null, $thick: 2px, $padding: 0, $color: solid) { 
+  width:$size + $padding * 2;
+  height:$size + $padding * 2;
+  &amp;:after,
+  &amp;:before{
+    content:&#39;&#39;;
+    @include poslt(50%,50%);
+    width:round($size * $sqrt2 - $thick);
+    height:$thick;
+    background-color:$color;
+  }
+  &amp;:after{
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &amp;:before{
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+ }" data-collapsed="@mixin ic-x($size: null, $thick: 2px, $padding: 0, $color: solid) { ... }"><code>@mixin ic-x($size: null, $thick: 2px, $padding: 0, $color: solid) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>X 모양 아이콘 (ex. 닫기버튼 , 삭제버튼 등)</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>아이콘 넓이/높이값 (하위브라우져를 위해 짝수값 권장)</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$thick</code></th><td data-label="desc"><p>아이콘 막대 두께</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>2px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$padding</code></th><td data-label="desc"><p>아이콘 여백 값</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>아이콘 여백 값</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code>solid</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.foo {
+   @include ic-x(22px,2px);
+   @include relative();
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.foo{
+	 width:22px;
+	 height:22px;
+	 position:relative;
+	 &amp;:after,
+	 &amp;:before{
+      content:&#39;&#39;;
+      position:absolute;
+      left:50%;
+      top:50%;
+      width:29px;
+      height:2px;
+      background-color:#000;
+    }
+	 &amp;:after{
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+	 &amp;:before{
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+ }</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>wit.nts-corp.com</p></li></ul></section><section class="main__item container item" id="mixin-mixin-withbtn"><h3 class="item__heading"><a class="item__name" href="#mixin-withbtn">withbtn</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin withbtn($pdr: null, $height: null, $right: 0, $top: 0) { 
+  @include relative();
+  padding-right:$pdr;
+  box-sizing:border-box;
+  &gt; input{
+    width:100%;
+    @if $height {
+      @include vtext($height...);
+    }
+  }
+  button,
+  a{
+    @include posrt($right,$top);
+  }
+ }" data-collapsed="@mixin withbtn($pdr: null, $height: null, $right: 0, $top: 0) { ... }"><code>@mixin withbtn($pdr: null, $height: null, $right: 0, $top: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>input과 버튼이 같이 있는 경우(버튼 제외 반응형)</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$pdr</code></th><td data-label="desc"><p>padding-right값</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc"><p>input 높이값(버튼과 인풋이 높이가 다른경우)</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$right</code></th><td data-label="desc"><p>기본값이 아닌경우 수치 적용</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$top</code></th><td data-label="desc"><p>기본값이 아닌경우 수치 적용</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.foo {
+	@include withbtn(30px)
+}
+.bar {
+	@include withbtn(30px, 30px);
+}
+.baz {
+	@include withbtn(30px, $right:10px, $top:5px);
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.foo{
+	 padding-right:30px;
+	 box-sizing:border-box;
+    input{
+      width:100%;
+    }
+    button,a{
+      position:absolute;
+      right:0;
+      top:0;
+    }
+ }
+.bar{
+	 padding-right:30px;
+	 box-sizing:border-box;
+    input{
+      width:100%;
+      height:30px;
+      line-height:30px;
+    }
+    button,a{
+      position:absolute;
+      right:0;
+      top:0;
+    }
+ }
+.baz{
+	 padding-right:30px;
+	 box-sizing:border-box;
+    input{
+      width:100%;
+    }
+    button,a{
+      position:absolute;
+      right:10px;
+      top:5px;
+    }
+ }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-mixin-vtext"><code>vtext</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>LKW</p></li></ul></section><section class="main__item container item" id="mixin-mixin-position"><h3 class="item__heading"><a class="item__name" href="#mixin-position">position</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) { 
   position: $position;
   top: $top;
   right: $right;
@@ -70,6 +288,18 @@
 }
 .baz{
 	@include fixed($left:50%,$top:50%);
+}
+.posrt{
+	@include posrt();
+}
+.posrb{
+	@include posrb();
+}
+.poslt{
+	@include poslt();
+}
+.poslb{
+	@include poslb();
 }</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.foo {
 position:absolute;
  left:0;
@@ -82,7 +312,27 @@ position:absolute;
   position:fixed;
   left:50%;
   top:50%;
-}</code></pre></div></section><section class="main__item container item" id="mixin-mixin-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-radius">radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin radius($radius: null) { 
+}
+.posrt{
+  position:absolute;
+  right:0;
+  top:0;
+}
+.posrb{
+  position:absolute;
+  right:0;
+  bottom:0;
+}
+.poslt{
+  position:absolute;
+  left:0;
+  top:0;
+}
+.poslb{
+  position:absolute;
+  left:0;
+  bottom:0;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>LKW</p></li></ul></section><section class="main__item container item" id="mixin-mixin-radius"><h3 class="item__heading"><a class="item__name" href="#mixin-radius">radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin radius($radius: null) { 
 	border-radius:$radius;
  }" data-collapsed="@mixin radius($radius: null) { ... }"><code>@mixin radius($radius: null) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Border-radius Mixin</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$radius</code></th><td data-label="desc"><p>border-radius 수치</p></td><td data-label="type"><code>$args...</code></td><td data-label="default"><code>null</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.foo {
 	@include radius(50%);
@@ -94,7 +344,7 @@ position:absolute;
 }
 .bar {
  border-radius: 13px 13px 13px 0;
-}</code></pre></div></section><section class="main__item container item" id="mixin-mixin-size"><h3 class="item__heading"><a class="item__name" href="#mixin-size">size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin size($width: null, $height: null) { 
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-mixin-bullet"><code>bullet</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>LKW</p></li></ul></section><section class="main__item container item" id="mixin-mixin-size"><h3 class="item__heading"><a class="item__name" href="#mixin-size">size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin size($width: null, $height: null) { 
   width: $width;
   height: $height;
  }" data-collapsed="@mixin size($width: null, $height: null) { ... }"><code>@mixin size($width: null, $height: null) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>block 사이즈</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>가로사이즈</p></td><td data-label="type"><code>$arg</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc"><p>세로사이즈</p></td><td data-label="type"><code>$arg</code></td><td data-label="default"><code>null</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.foo {
@@ -109,10 +359,32 @@ position:absolute;
 .bar {
  width:20px;
   height:18px;
-}</code></pre></div></section><section class="main__item container item" id="mixin-mixin-vtext"><h3 class="item__heading"><a class="item__name" href="#mixin-vtext">vtext</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin vtext($width: null, $height: null) { 
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-mixin-bullet"><code>bullet</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-mixin-sr-only"><code>sr-only</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>LKW</p></li></ul></section><section class="main__item container item" id="mixin-mixin-sr-only"><h3 class="item__heading"><a class="item__name" href="#mixin-sr-only">sr-only</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin sr-only() { 
+	@include absolute();
+	@include size(1px);
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+ }" data-collapsed="@mixin sr-only() { ... }"><code>@mixin sr-only() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>screen reader only(웹접근성 IR기법)</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.sr-only {
+	@include sr-only()
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.sr-only{
+	 position:relative;;
+	 width:1px;
+	 height:1px;
+	 padding:0;
+	 margin:-1px;
+	 overflow:hidden;
+	 clip: rect(0,0,0,0);
+	 border:0;
+ }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-mixin-size"><code>size</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>bootstrap</p></li></ul></section><section class="main__item container item" id="mixin-mixin-vtext"><h3 class="item__heading"><a class="item__name" href="#mixin-vtext">vtext</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin vtext($height: null, $line-height: $height, $width: null) { 
   height:$height;
   line-height:$line-height;
- }" data-collapsed="@mixin vtext($width: null, $height: null) { ... }"><code>@mixin vtext($width: null, $height: null) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>텍스트 세로 정렬</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>높이값</p></td><td data-label="type"><code>$arg</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc"><p>행간</p></td><td data-label="type"><code>$arg</code></td><td data-label="default"><code>null</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.foo {
+  @if($width){
+    width:$width;
+  }
+ }" data-collapsed="@mixin vtext($height: null, $line-height: $height, $width: null) { ... }"><code>@mixin vtext($height: null, $line-height: $height, $width: null) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>텍스트 세로 정렬</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc"><p>높이값</p></td><td data-label="type"><code>$arg</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$line-height</code></th><td data-label="desc"><p>행간</p></td><td data-label="type"><code>$arg</code></td><td data-label="default"><code>$height</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>넓이값 ( 넓이값이 필요한 경우))</p></td><td data-label="type"><code>$arg</code></td><td data-label="default"><code>null</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.foo {
 	@include vtext(20px)
 }
 .bar{
@@ -124,23 +396,4 @@ position:absolute;
 .bar {
  height:20px;
   line-height:18px;
-}</code></pre></div></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-str-replace"><h3 class="item__heading"><a class="item__name" href="#function-str-replace">str-replace</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function str-replace($string, $search, $replace) { 
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
- }" data-collapsed="@function str-replace($string, $search, $replace) { ... }"><code>@function str-replace($string, $search, $replace) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Replace <code>$search</code> with <code>$replace</code> in <code>$string</code></p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$string</code></th><td data-label="desc"><p>Initial string</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$search</code></th><td data-label="desc"><p>Substring to replace</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$replace</code></th><td data-label="desc"><p>(&#39;&#39;) - New value</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code> &mdash;<p>Updated string</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Scss</p></div><pre class="example__code language-scss"><code>.selector {
-  $string: &#39;aaaa&#39;;
-  content: str-replace($string, &#39;a&#39;, &#39;b&#39;);
-}</code></pre></div><div class="item__example example"><div class="example__description"><p>Compile css</p></div><pre class="example__code language-css"><code>.selector {
-  content: &quot;bbbb&quot;;
-}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Hugo Giraudel</p></li></ul></section><section class="main__item container item" id="undefined-function-strip-unit"><h3 class="item__heading"><a class="item__name" href="#function-strip-unit">strip-unit</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function strip-unit($number) { 
-  @if type-of($number) == &#39;number&#39; and not unitless($number) {
-    @return $number / ($number * 0 + 1);
-  }
-
-  @return $number;
- }" data-collapsed="@function strip-unit($number) { ... }"><code>@function strip-unit($number) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Remove the unit of a length</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$number</code></th><td data-label="desc"><p>Number to remove unit from</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>Unitless number</p></div></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Scss guide by lkw</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under ISC</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-mixin-withbtn"><code>withbtn</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Scss guide by lkw</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under ISC</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

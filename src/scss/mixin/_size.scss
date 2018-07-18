@@ -1,6 +1,7 @@
 /// block 사이즈
 /// @access public
 /// @group Mixin
+/// @author LKW
 /// @param {$arg} $width [null] - 가로사이즈
 /// @param {$arg} $height [null] - 세로사이즈
 /// @example scss - Scss
@@ -23,8 +24,4 @@
 @mixin size($width, $height:$width) {
   width: $width;
   height: $height;
-}
-
-.a{
-  @include size(100%);
 }

@@ -1,6 +1,7 @@
 /// position attribute
 /// @access public
 /// @group Mixin
+/// @author LKW
 /// @param {String} $position - `relative`, `absolute` or `fixed`
 /// @param {Length} $top [null] - Top offset
 /// @param {Length} $right [null] - Right offset
@@ -16,6 +17,18 @@
 ///		.baz{
 ///			@include fixed($left:50%,$top:50%);
 ///		}
+///		.posrt{
+///			@include posrt();
+///		}
+///		.posrb{
+///			@include posrb();
+///		}
+///		.poslt{
+///			@include poslt();
+///		}
+///		.poslb{
+///			@include poslb();
+///		}
 /// @example css - Compile css
 ///   .foo {
 ///		 position:absolute;
@@ -29,6 +42,26 @@
 ///     position:fixed;
 ///     left:50%;
 ///     top:50%;
+///   }
+///   .posrt{
+///     position:absolute;
+///     right:0;
+///     top:0;
+///   }
+///   .posrb{
+///     position:absolute;
+///     right:0;
+///     bottom:0;
+///   }
+///   .poslt{
+///     position:absolute;
+///     left:0;
+///     top:0;
+///   }
+///   .poslb{
+///     position:absolute;
+///     left:0;
+///     bottom:0;
 ///   }
 
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
@@ -49,4 +82,20 @@
 
 @mixin fixed($args...){
   @include position(fixed, $args...);
+}
+
+@mixin posrt($right:0,$top:0){
+  @include absolute($right:$right,$top:$top);
+}
+
+@mixin poslt($left:0,$top:0){
+  @include absolute($left:$left,$top:$top);
+}
+
+@mixin posrb($left:0,$bottom:0){
+  @include absolute($left:$left,$bottom:$bottom);
+}
+
+@mixin poslb($left:0,$bottom:0){
+  @include absolute($left:$left,$bottom:$bottom);
 }

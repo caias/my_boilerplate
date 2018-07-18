@@ -1,6 +1,7 @@
 /// 반응형 Grid Column
 /// @access public
 /// @group Mixin
+/// @author LKW
 /// @param {$arg} $grid-count [null] - Column 갯수
 /// @param {$arg} $grid-space [null] - Column 여백
 /// @example scss - Scss
@@ -22,11 +23,11 @@
 
 @mixin grid($grid-count:null , $grid-space:null){
   &.grid0#{$grid-count}{
+    @extend %clearfix;
     width:auto;
     @if($grid-space){
       margin-left:- #{$grid-space};
     }
-    overflow:hidden;
     > .grid{
       float: left;
       width:(100% / $grid-count);

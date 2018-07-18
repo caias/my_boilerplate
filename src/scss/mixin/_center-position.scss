@@ -1,0 +1,8 @@
+@mixin center-positon($width,$height){
+	top:50%;
+	left:50%;
+	width:$width;
+	height:$height;
+	margin-top:- half($height);
+	margin-left:- half($width);
+}

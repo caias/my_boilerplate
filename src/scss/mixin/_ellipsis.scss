@@ -1,6 +1,7 @@
 /// 말줄임표를 위한 Mixin
 /// @access public
 /// @group Mixin
+/// @author LKW
 /// @param {Number} $lines [1] - 행의 수
 /// @param {Number} $line-height [null] - 행간 수치
 /// @example scss - Scss
@@ -29,6 +30,7 @@
 ///   }
 
 @mixin ellipsis($lines:1, $line-height: false){
+	width:100%;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	@if ($lines > 1){

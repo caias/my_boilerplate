@@ -1,4 +1,6 @@
-/// Replace `$search` with `$replace` in `$string`
+/// String replace
+/// @access public
+/// @group Function
 /// @author Hugo Giraudel
 /// @param {String} $string - Initial string
 /// @param {String} $search - Substring to replace
