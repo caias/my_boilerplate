@@ -25,9 +25,9 @@ Node.js / npm / gulp / yarn이 설치 되있지 않다면 설치를 꼭 해주�
 위에 기본적인 설치가 끝나신 후 터미널 창에 [yarn]이라고 입력하시게 되면 package.json을 토대로 필요한 dependencies들이 설치가 되고 설치가 완료됬다면 세팅은 끝입니다.
 
 
-## 파일 구조
+## file tree view
 ```
-gulp-boilerplate/
+my-boilerplate/
 |—— dist/
 |   |—— css/ # 컴파일된 css파일들
 |   |   |—— *.css
@@ -43,14 +43,23 @@ gulp-boilerplate/
 |—— src/ static assets
 |   |—— html/
 |   |—— images/
+|   |———————— sprite/
 |   |—— js/
 |   |—— scss/
+|   |———————— vendors/
 |—— gulfile.babel.js
 |—— package.json
 |—— README.md
 |—— test.html
 |—— yarn.lock
 ```
+
+1. __dist__ - compile 이나 build 또는 가공된 파일들이 만들어지는 폴더
+2. __gulp__ - gulp 관련 config나 task설정등이 들어있는 폴더
+3. __docs__ - sass 가이드 파일이 만들어지는 폴더
+4. __src__ - 기본 정적 리소스들이 들어있는 폴더
+5. __images/srptie__ - auto sprite 를 만들 각각의 이미지 파일들이 들어가며, 하위 폴더명이 스프라이트 완성본 파일이름이 됩니다.
+6. __scss/vendors__ - 자동으로 이미지 스프라이트가 작성되면 관련 scss파일들이 들어가는 폴더입니다.
 
 ## 명령어
 명령어들은 기본적으로 터미널창에 입력해서 사용합니다.
@@ -64,3 +73,10 @@ gulp-boilerplate/
 - [gulp clean] : dist 폴더 삭제
 - [gulp watch] : 작업중에 변경되는 파일을 감지하여 바뀐파일의 정보를 알려주며 sass/scss파일 수정시 자동 컴파일  
 - [gulp server] : brower-sync를 사용, 기본토프(port3000)을 통해 로컬서버를 실행하게됩니다.  기본적으로 watch기능이 같이 사용되며, 파일 수정후 저장시 livereload도 같이 작동됩니다.
+
+
+** 기타 Notice
+
+자동 이미지 스프라이트를 쓸때 같은 background-image-url의 불필요한 반복 선언을 막기위해서 개인적으로는 파일
+[node_modules/spritesheet-templates/lib/templates/scss.template.handlebars] 의 line93 : @include sprite-image($sprite);
+이부분을 삭제하고 따로 한번만 선언해서 사용합니다.
