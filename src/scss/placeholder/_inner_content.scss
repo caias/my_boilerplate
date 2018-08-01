@@ -1,0 +1,20 @@
+/// float 해제
+/// @access public
+/// @group extend
+/// @author bootstrap
+/// @example scss - Scss
+///		.foo {
+///			@extend %clearfix
+///		}
+/// @example css - Compile css
+///   .foo::after {
+///     content:'';
+///     display:table;
+///     clear:both;
+///   }
+///
+
+%inner {
+  width:$content-center-size;
+  margin:0 auto;
+}

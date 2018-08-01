@@ -1,0 +1,62 @@
+$palettes: (
+  white:(
+    1: #fff
+  ),
+  blue:(
+    1: #305ec8,
+    2: #4776e1,
+    3: #1883d7,
+    4: #1c4790,
+		5: #f3f9ff,
+		6: #93a5dd,
+		7: #d8def2
+  ),
+  black: (
+    1: #555,
+    2: #999,
+    3: #cdcdcd,
+    4: #e5e5ea,
+    5: #f5f5f6,
+    6: #111,
+    7: #63646a,
+    8: #abacac,
+    9: #d8d7d6,
+    10: #abacac,
+		11: #303030,
+		12: #d8d7d6
+  ),
+	red:(
+		1: #ed1c24,
+		2: #aa070d
+	),
+);
+
+//reset 폰트 관련
+$font-color-base:color(black,1) !default;
+$font-size-base:rem(16px) !default;
+$font-family-base:'Nanum Gothic','돋움',Dotum,sans-serif !default;
+$content-center-size:1158px !default;
+
+// 이미지 경로 관련 variable
+// $img_url : '../../dist/images/sprite';
+$img_url : '/dist/images';
+$sprite : '#{$img_url}/sprite/img_sprite.png';
+
+//border basic style - border mixin 관련
+$bd-basic-color:color(black,2) !default;
+$bd-basic-style:solid !default;
+$bd-basic-width:1px !default;
+
+// route2
+$sqrt2 : 1.41421356237;
+
+// z-index 매핑
+$z-indexes: (
+  modal       : 200,
+  dim         : 150,
+  navigation  : 100
+);
+
+// rem변환시 하위 브라우져 및 하위 OS를 위해 px값을 같이 compile할지에 대한 여부
+$with-px: false;
+$rem-baseSize: 16 !default;
