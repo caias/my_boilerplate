@@ -4,9 +4,7 @@
   "description": "UI-Devloper resource",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "build": "gulp clean && gulp --env=prod pcsass && gulp --env=prod msass && gulp prefix",
-    "pc": "gulp watch && browser-sync start --server --index src/pc/index.html",
-    "mo": "gulp watch && browser-sync start --server --index src/m/index.html"
+    "build": "gulp clean && gulp --env=prod pcsass && gulp --env=prod msass && gulp prefix"
   },
   "repository": {
     "type": "git",
@@ -28,7 +26,6 @@
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",
     "del": "3.0.0",
-    "foundation-sites": "^6.4.4-rc1",
     "graceful-fs": "4.1.11",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "4.1.0",
@@ -56,10 +53,6 @@
     "vinyl-buffer": "^1.0.1"
   },
   "devDependencies": {
-    "accoutrement-color": "^2.2.2",
-    "accoutrement-init": "^1.1.2",
-    "accoutrement-layout": "^3.0.3",
-    "accoutrement-scale": "^5.0.2",
     "browser-sync": "2.20.0",
     "gulp-clean-css": "3.9.2",
     "gulp-imagemin": "4.0.0",

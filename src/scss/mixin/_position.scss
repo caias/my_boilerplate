@@ -31,38 +31,39 @@
 ///		}
 /// @example css - Compile css
 ///   .foo {
-///		 position:absolute;
+///    position:absolute;
 ///    left:0;
 ///    top:0;
 ///   }
 ///   .bar {
-///     position:relative;
+///    position:relative;
 ///   }
 ///   .baz{
-///     position:fixed;
-///     left:50%;
-///     top:50%;
+///    position:fixed;
+///    left:50%;
+///    top:50%;
 ///   }
 ///   .posrt{
-///     position:absolute;
-///     right:0;
-///     top:0;
+///    position:absolute;
+///    right:0;
+///    top:0;
 ///   }
 ///   .posrb{
-///     position:absolute;
-///     right:0;
-///     bottom:0;
+///    position:absolute;
+///    right:0;
+///    bottom:0;
 ///   }
 ///   .poslt{
-///     position:absolute;
-///     left:0;
-///     top:0;
+///    position:absolute;
+///    left:0;
+///    top:0;
 ///   }
 ///   .poslb{
-///     position:absolute;
-///     left:0;
-///     bottom:0;
+///    position:absolute;
+///    left:0;
+///    bottom:0;
 ///   }
+///
 
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
   position: $position;

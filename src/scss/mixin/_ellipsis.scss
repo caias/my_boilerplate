@@ -28,6 +28,7 @@
 ///		  text-overflow: ellipsis;
 ///		  -webkit-box-orient: vertical;
 ///   }
+///
 
 @mixin ellipsis($lines:1, $line-height: false){
 	width:100%;

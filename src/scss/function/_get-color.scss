@@ -35,6 +35,7 @@
 ///		.baz{
 ///			 color:#555;
 ///		 }
+///
 
 @function color($color, $value) {
     @return map-get(map-get($palettes, $color), $value);

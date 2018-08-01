@@ -2,7 +2,7 @@
 /// @access public
 /// @group Mixin
 /// @param {Number} $size [2] - buiiet size
-/// @param {Number} $color [#999] - bullet backround color
+/// @param {Color} $color [#999] - bullet backround color
 /// @param {Number} $lineHeight [20] - bullet이 들어가는 텍스트 행간
 /// @param {Number} $pdl [10] - padding-left값
 /// @param {Number} $radius [50%] - border-radius5값
@@ -21,20 +21,22 @@
 ///				 height:2px;
 ///				 position:absolute;
 ///				 left:0;
-///				 top:7.5px;
+///				 top:9px;
 ///				 border-radius:50%;
 ///				 background-color:#999;
 ///			 }
 ///		 }
+///
 
 @mixin bullet($size:2px,$color:color(black,2),$lineHeight:20px,$pdl:10px,$radius:50%){
 	position:relative;
 	padding-left:$pdl;
 	line-height:$lineHeight;
+	$top:round(($lineHeight - $size) / 2);
 	&:before{
 		content:'';
 		@include size($size);
-		@include absolute($top:($lineHeight - $size - 1) / 2 , $left:0);
+		@include absolute($top:$top , $left:0);
 		@include radius($radius);
 		background-color:$color;
 	}

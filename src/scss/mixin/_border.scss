@@ -2,7 +2,7 @@
 /// @access public
 /// @group Mixin
 /// @author LKW
-/// @param {value} $bd-basic-color [#999] - border-color
+/// @param {Color} $bd-basic-color [#999] - border-color
 /// @param {value} $bd-basic-width [1px] - border-width
 /// @param {value} $bd-basic-style [solid] - border-style
 /// @example scss - Scss
@@ -29,6 +29,7 @@
 ///			 border-color:#ed1c24;
 ///			 border-width:2px 0;
 ///		 }
+///
 
 @mixin bd($bd-color:$bd-basic-color, $bd-width:$bd-basic-width , $bd-style:$bd-basic-style ){
 	@if length($bd-width) > 1 {
@@ -36,6 +37,6 @@
 		border-color:$bd-color;
 		border-width:$bd-width;
 	}@else {
-		border:$bd-width * 1px $bd-style $bd-color;
+		border:$bd-width $bd-style $bd-color;
 	}
 }

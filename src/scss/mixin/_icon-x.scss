@@ -5,7 +5,7 @@
 /// @param {Number} $size [null] - 아이콘 넓이/높이값 (하위브라우져를 위해 짝수값 권장)
 /// @param {Number} $thick [2px] - 아이콘 막대 두께
 /// @param {Number} $padding [0] - 아이콘 여백 값
-/// @param {color} $color [solid] - 아이콘 여백 값
+/// @param {color} $color [#000] - 아이콘 여백 값
 /// @example scss - Scss
 ///		.foo {
 ///     @include ic-x(22px,2px);
@@ -33,8 +33,9 @@
 ///        transform: translate(-50%, -50%) rotate(135deg);
 ///      }
 ///		 }
+///
 
-@mixin ic-x($size:null, $thick:2px, $padding:0, $color:#000, $position:relative;){
+@mixin ic-x($size:null, $thick:2px, $padding:0, $color:#000, $position:relative){
   width:$size + $padding * 2;
   height:$size + $padding * 2;
   &:after,

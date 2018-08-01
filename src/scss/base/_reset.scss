@@ -1,25 +1,35 @@
-@import url('//fonts.googleapis.com/css?family=Nanum+Gothic');
-@import "variables";
-@import "function/__function";
-@import "mixin/__mixin";
-// Body reset
-//## 폰트와 관련된 타입
-$font-color-base:color(black,1);
-$font-family-base:'Nanum Gothic','돋움',Dotum,sans-serif;
-$font-size-base : 15px;
-$center-size:1158px;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+  margin: 0;
+	padding: 0;
+	border: 0;
+}
 
 html {
   height:100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
   color:$font-color-base;
 	font-family: $font-family-base;
-	font-size: $font-size-base;
+  font-size:$font-size-base;
 	word-break: break-all;
-  line-height:1.4;
+  line-height:1.15;
 	height:100%;
+  -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 address,cite,code,dfn,em,var {
@@ -33,78 +43,20 @@ caption{
 	overflow:hidden;
 }
 
-*{
-  margin:0;
-  padding:0;
-}
-
 ul,ol,li{
   list-style:none;
 }
 
-button{
-  @include radius(0);
-  border:0;
-  span{
-    position:relative;
-  }
+img{
+  font-size:0;
 }
 
-a,button {
-	padding: 0;
-  display:inline-block;
-	overflow: visible;
-	border: 0 none;
-	font: inherit;
-	background: none;
-	cursor: pointer;
-	color:inherit;
-	text-decoration:none;
-  box-sizing:border-box;
+blockquote{
+  quotes: none;
 }
 
-label{
-  display:inline-block;
-	cursor:pointer;
-  position:relative;
-  vertical-align: middle;
-}
-
-input[type=text],
-input[type=password]{
-  border:1px solid color(black,3);
-  box-sizing:border-box;
-  vertical-align:middle;
-  padding:0 10px;
-  color:color(black,2);
-  background-color:color(white,1);
-  @include radius(0);
-	@include vtext(40px);
-}
-select{
-	border:1px solid color(black,3);
-  box-sizing:border-box;
-  vertical-align:middle;
-  padding:0 0 0 10px;
-  color:color(black,1);
-  background-color:color(white,1);
-	@include vtext(40px);
-  @include radius(0);
-}
-
-input[type=text]::-ms-clear {
-  display:none !important;
-}
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color:color(black,2) !important;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color:color(black,2) !important;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color:color(black,2) !important;
-}
-input[type="radio"],
-input[type="checkbox"]{
-  display:none;
+blockquote:before,
+blockquote:after{
+  content: '';
+  content: none;
 }

@@ -7,7 +7,7 @@
 	display:none;
 	width:235px;
 	box-sizing:border-box;
-	border:1px solid color(blue,1);
+	@include bd(color(blue,1));
 	padding:10px;
 	background-color:color(white,1);
 }

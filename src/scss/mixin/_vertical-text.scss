@@ -13,13 +13,14 @@
 ///		}
 /// @example css - Compile css
 ///   .foo {
-///		  height:20px;
+///     height:20px;
 ///     line-height:20px;
 ///   }
 ///   .bar {
-///		  height:20px;
+///     height:20px;
 ///     line-height:18px;
 ///   }
+///
 
 @mixin vtext($height, $line-height:$height, $width:null){
   height:$height;

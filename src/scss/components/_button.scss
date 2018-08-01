@@ -1,25 +1,47 @@
-.round_btn{
-  padding:0 20px;
-  min-width:109px;
-  box-sizing:border-box;
-  @include vtext(40px, 38px);
-  @include radius(20px);
-  font-size:15px;
-  font-weight: bold;
-  &.blue{
-    color:color(white,1);
-    background-color:color(blue,1);
+button{
+  @include radius(0);
+  border:0;
+  span{
+    position:relative;
   }
 }
 
-.btn_gray_s{
-  background-color:color(black,7);
-  font-size:13px;
-  width:69px;
-  vertical-align: middle;
-  font-weight: bold;
-  color:color(white,1);
-  text-align: center;
-  @include vtext(30px);
-  @include radius(15px);
+a,button {
+	padding: 0;
+  display:inline-block;
+	overflow: visible;
+	border: 0 none;
+	font: inherit;
+	background: none;
+	cursor: pointer;
+	color:inherit;
+	text-decoration:none;
+  box-sizing:border-box;
+}
+
+%round-btn{
+  padding:0 20px;
+  min-width:110px;
+  box-sizing:border-box;
+  @include radius(20px);
+  @include vtext(40px);
+  font-size:15px;
+  color:#fff;
+}
+
+$round-btn-color:(
+  blue : (
+    background-color:#305ec8,
+    border:1px solid #305ec8
+  ),
+  gray : (
+    background-color:#999,
+    border:1px solid #000,
+    color:#000
+  ),
+);
+
+.round-btn{
+  @extend %round-btn;
+  @include get-nested-list($round-btn-color);
 }
