@@ -22,7 +22,7 @@ Node.js / npm / gulp / yarn이 설치 되있지 않다면 설치를 꼭 해주�
 - [Yarn](https://yarnpkg.com/lang/en/) `npm install -g yarn`
 
 ### 시작하기
-위에 기본적인 설치가 끝나신 후 터미널 창에 [yarn]이라고 입력하시게 되면 package.json을 토대로 필요한 dependencies들이 설치가 되고 설치가 완료됬다면 세팅은 끝입니다.
+위에 기본적인 설치가 끝나신 후 터미널 창에 [__yarn__]이라고 입력하시게 되면 package.json을 토대로 필요한 dependencies들이 설치가 되고 설치가 완료됬다면 세팅은 끝입니다.
 
 
 ## file tree view
@@ -58,7 +58,7 @@ my-boilerplate/
 2. __gulp__ - gulp 관련 config나 task설정등이 들어있는 폴더
 3. __docs__ - sass 가이드 파일이 만들어지는 폴더
 4. __src__ - 기본 정적 리소스들이 들어있는 폴더
-5. __images/srptie__ - auto sprite 를 만들 각각의 이미지 파일들이 들어가며, 하위 폴더명이 스프라이트 완성본 파일이름이 됩니다.
+5. __images/sprtie__ - auto sprite 를 만들 각각의 이미지 파일들이 들어가며, 하위 폴더명이 스프라이트 완성본 파일이름이 됩니다.
 6. __scss/vendors__ - 자동으로 이미지 스프라이트가 작성되면 관련 scss파일들이 들어가는 폴더입니다.
 
 ## 명령어
@@ -75,7 +75,7 @@ my-boilerplate/
 - [gulp server] : brower-sync를 사용, 기본토프(port3000)을 통해 로컬서버를 실행하게됩니다.  기본적으로 watch기능이 같이 사용되며, 파일 수정후 저장시 livereload도 같이 작동됩니다.
 
 
-** 기타 Notice
+## 기타 Notice
 
 자동 이미지 스프라이트를 쓸때 같은 background-image-url의 불필요한 반복 선언을 막기위해서 개인적으로는 파일
 [node_modules/spritesheet-templates/lib/templates/scss.template.handlebars] 의 line93 : @include sprite-image($sprite);
