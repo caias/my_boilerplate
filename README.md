@@ -55,6 +55,8 @@ gulp-boilerplate/
 ## 명령어
 명령어들은 기본적으로 터미널창에 입력해서 사용합니다.
 
+- [gulp] : 현재 설정되 있는 task 명령어들을 보여주는 명령어
+- [gulp doc] : sass파일의 가이드문서를 만들어주는 명령어
 - [gulp sass] : sass/scss -> css 컴파일해서 dist폴더에 복사합니다.
 - [gulp images] : 이미지 파일들을 압축하여 dist폴더로 복사합니다.
 - [gulp sprite] : 자동 이미지 스프라이트 작업을 위한 명령어.
