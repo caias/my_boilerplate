@@ -22,7 +22,7 @@ Node.js / npm / gulp / yarn이 설치 되있지 않다면 설치를 꼭 해주�
 - [Yarn](https://yarnpkg.com/lang/en/) `npm install -g yarn`
 
 ### 시작하기
-위에 기본적인 설치가 끝나신 후 터미널 창에 [yarn]이라고 입력하시게 되면 package.json을 토대로 필요한 dependencies들이 설치가되고 설치가 완료됬다면 세팅은 끝입니다.
+위에 기본적인 설치가 끝나신 후 터미널 창에 [yarn]이라고 입력하시게 되면 package.json을 토대로 필요한 dependencies들이 설치가 되고 설치가 완료됬다면 세팅은 끝입니다.
 
 
 ## 파일 구조
@@ -34,12 +34,13 @@ gulp-boilerplate/
 |   |—— images/
 |   |   |—— # image files
 |   |   |——  sprite/ # 생성된 이미지 스프라이트 파일
+|—— gulp/ gulp config 및 task 파일들
 |—— docs/ * sassdoc guide 문서
 |   |—— assets/
 |   |—— dist/
 |   |—— index.html
 |   |—— # other docs
-|—— src/
+|—— src/ static assets
 |   |—— html/
 |   |—— images/
 |   |—— js/
@@ -50,3 +51,14 @@ gulp-boilerplate/
 |—— test.html
 |—— yarn.lock
 ```
+
+## 명령어
+명령어들은 기본적으로 터미널창에 입력해서 사용합니다.
+
+- [gulp sass] : sass/scss -> css 컴파일해서 dist폴더에 복사합니다.
+- [gulp images] : 이미지 파일들을 압축하여 dist폴더로 복사합니다.
+- [gulp sprite] : 자동 이미지 스프라이트 작업을 위한 명령어.
+- [gulp spsass] : 이미지 스프라이트후에 sass/scss 컴파일까지 같이 실행되는 명령어
+- [gulp clean] : dist 폴더 삭제
+- [gulp watch] : 작업중에 변경되는 파일을 감지하여 바뀐파일의 정보를 알려주며 sass/scss파일 수정시 자동 컴파일  
+- [gulp server] : brower-sync를 사용, 기본토프(port3000)을 통해 로컬서버를 실행하게됩니다.  기본적으로 watch기능이 같이 사용되며, 파일 수정후 저장시 livereload도 같이 작동됩니다.
