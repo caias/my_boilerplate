@@ -28,25 +28,21 @@ Node.js / npm / gulp / yarn이 설치 되있지 않다면 설치를 꼭 해주�
 ## file tree view
 ```
 my-boilerplate/
-|—— dist/
-|   |—— css/ # 컴파일된 css파일들
+|—— dist/ (1)
+|   |—— css/
 |   |   |—— *.css
 |   |—— images/
-|   |   |—— # image files
+|   |   |——  image files
 |   |   |——  sprite/ # 생성된 이미지 스프라이트 파일
-|—— gulp/ gulp config 및 task 파일들
-|—— docs/ * sassdoc guide 문서
-|   |—— assets/
-|   |—— dist/
-|   |—— index.html
-|   |—— # other docs
-|—— src/ static assets
+|—— gulp/ (2)
+|—— docs/ (3)
+|—— src/ (4)
 |   |—— html/
 |   |—— images/
-|   |———————— sprite/
+|   |   |—— sprite/ (5)
 |   |—— js/
 |   |—— scss/
-|   |———————— vendors/
+|   |   |—— vendors/ (6)
 |—— gulfile.babel.js
 |—— package.json
 |—— README.md
