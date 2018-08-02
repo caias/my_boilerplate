@@ -1,0 +1,30 @@
+# markdown기법의 들어가있는 소스파릴의 경로 (.css / .scss / .sass / .less / .styl / .js / .erb / .md / .markdown)
+source: ./src/scss
+
+# WSG가이드 문서가 생설될 폴더 경로 지정
+destination: ./wsg
+
+# WSG가이드 문서가 참조할 컴파일된 css include 경로
+css_include:
+  - css/default.css
+
+# hologram WSG생성시 쓰여질 테마부분
+documentation_assets: node_modules/hologram-github-theme
+
+# hologram WSG생성시 쓰여질 템플릿
+code_example_templates: ./code_example_templates
+
+# hologram WSG생성시 쓰여질 렌더링
+code_example_renderers: ./code_example_renderers
+
+# WSG가이드 문서에서 복사해올 컴파일된 css 경로
+dependencies:
+  - ./dist/css
+
+index: Web Style Guide
+
+# navigation level
+nav_level: all
+
+# 에러시 wsg compile을 멈출지에 대한 여부
+exit_on_warnings: false
