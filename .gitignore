@@ -16,4 +16,13 @@ node_modules
 # debug log
 *.log
 
+# 컴파일된 파일들의 폴더
 dist/
+
+# hologram 생성시 쓰이는 파일들
+wsg/
+code_example_templates/
+doc_assets/
+
+# scssdoc 생성시 쓰이는 파일들
+docs/
