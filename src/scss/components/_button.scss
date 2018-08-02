@@ -1,3 +1,20 @@
+/*doc
+---
+title: Buttons
+name: buttons
+category: Components
+---
+
+This is an example of how to use ```html_example_table``` to output the code snippet and rendered output next to each
+other in a table.
+
+```html_example_table
+<button class="round-btn blue">Button</button>
+
+<a class="round-btn gray" href="#">Link</a>
+```
+*/
+
 button{
   @include radius(0);
   border:0;

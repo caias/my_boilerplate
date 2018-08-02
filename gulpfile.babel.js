@@ -20,5 +20,6 @@ require('./gulp/spriteTask.js')(gulp, $, gulpConfig);
 require('./gulp/cleanTask.js')(gulp, $, gulpConfig);
 require('./gulp/buildTask.js')(gulp, $, gulpConfig);
 require('./gulp/docTask.js')(gulp, $, gulpConfig);
+require('./gulp/wsgTask.js')(gulp, $, gulpConfig);
 
 gulp.task('default', $.taskListing);
