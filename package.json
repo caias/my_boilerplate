@@ -1,26 +1,17 @@
 {
-  "name": "SCSS GUIDE by lkw",
+  "name": "scaffolding",
   "version": "1.0.0",
-  "description": "UI-Devloper resource",
+  "description": "ui-devloper resource",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "build": "gulp clean && gulp --env=prod pcsass && gulp --env=prod msass && gulp prefix"
+    "build": "gulp clean && gulp --env=prod sass && gulp prefix"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/caias/my_boilerplate.git"
   },
-  "author": "wemakeprice UI-Developer",
-  "contributors": [
-    "gloria <gloria@wemakeprice.com>",
-    "youngha <youngha@wemakeprice.com>",
-    "seryunkim <seryunkim@wemakeprice.com>",
-    "shooda <shooda@wemakeprice.com>",
-    "caias <caias@wemakeprice.com>",
-    "haeri <haeri@wemakeprice.com>",
-    "ruru913 <ruru913@wemakeprice.com>",
-    "sismaru <sismaru@wemakeprice.com>"
-  ],
+  "author": "lee kang won",
+  "contributors": "caias <caias1018@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "babel-core": "6.26.0",
@@ -40,26 +31,27 @@
     "gulp-replace": "0.6.1",
     "gulp-sass": "3.1.0",
     "gulp-sass-glob": "1.0.8",
-    "gulp-scss-lint": "^0.6.1",
+    "gulp-scss-lint": "0.6.1",
     "gulp-sourcemaps": "2.6.1",
     "gulp-util": "3.0.8",
     "gulp.spritesmith": "6.7.0",
     "gulp.spritesmith-multi": "3.1.0",
     "loads": "0.0.4",
     "merge-stream": "1.0.1",
-    "minimatch": "3.0.4",
+    "minimatch": "3.0.2",
     "run-sequence": "2.2.0",
-    "sassdoc-theme-herman": "^2.0.0",
-    "vinyl-buffer": "^1.0.1"
+    "vinyl-buffer": "1.0.1"
   },
   "devDependencies": {
     "browser-sync": "2.20.0",
     "gulp-clean-css": "3.9.2",
+    "gulp-hologram": "1.2.3",
     "gulp-imagemin": "4.0.0",
     "gulp-load-plugins": "1.5.0",
     "gulp-purifycss": "0.2.0",
     "gulp-task-listing": "1.0.1",
     "gulp-useref": "3.1.3",
-    "sassdoc": "^2.5.0"
+    "hologram-github-theme": "0.1.4",
+    "sassdoc": "2.5.0"
   }
 }
