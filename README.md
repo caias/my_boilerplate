@@ -79,7 +79,7 @@ my-boilerplate/
 1. gem install hologram
 2. hologram init
 
-##### Example config file
+##### config file
 
     # markdown기법의 들어가있는 소스파릴의 경로 (.css / .scss / .sass / .less / .styl / .js / .erb / .md / .markdown)
     source: ./src/scss
@@ -112,6 +112,48 @@ my-boilerplate/
     # 에러시 wsg compile을 멈출지에 대한 여부
     exit_on_warnings: false
 
+
+##### hologram 작성법
+    /*doc
+    ---
+    title: Buttons
+    name: buttons
+    category: Components
+    ---
+
+    css에 해당하는 부연 설명  미주알 고주알 중얼중얼
+
+    ```html_example_table
+    <button class="round-btn blue">Button</button>
+
+    <a class="round-btn gray" href="#">Link</a>
+    ```
+    */
+
+##### sassdoc 작성법
+    /// block 사이즈
+    /// @access public
+    /// @group Mixin
+    /// @author LKW
+    /// @param {$arg} $width [null] - 가로사이즈
+    /// @param {$arg} $height [$width] - 세로사이즈
+    /// @example scss - Scss
+    ///		.foo {
+    ///			@include size(20px)
+    ///		}
+    ///		.bar{
+    ///			@include size(20px,18px)
+    ///		}
+    /// @example css - Compile css
+    ///   .foo {
+    ///     width:20px;
+    ///     height:20px;
+    ///   }
+    ///   .bar {
+    ///     width:20px;
+    ///     height:18px;
+    ///   }
+    ///
 
 
 ### 기타 Notice
