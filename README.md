@@ -138,12 +138,12 @@ my-boilerplate/
     /// @param {$arg} $width [null] - 가로사이즈
     /// @param {$arg} $height [$width] - 세로사이즈
     /// @example scss - Scss
-    ///		.foo {
-    ///			@include size(20px)
-    ///		}
-    ///		.bar{
-    ///			@include size(20px,18px)
-    ///		}
+    ///   .foo {
+    ///   	@include size(20px)
+    ///   }
+    ///   .bar{
+    ///   	@include size(20px,18px)
+    ///   }
     /// @example css - Compile css
     ///   .foo {
     ///     width:20px;
