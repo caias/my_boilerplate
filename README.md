@@ -165,3 +165,22 @@ my-boilerplate/
  2. watch가 작동되고 있을 때 컴파일시에 에러가 날 경우 실수 방지를 위해 compile관련 명령어들 전부 사용중지되므로, ctrl+c로 watch Task 또는 Server Task를 중지하고 재실행 해야됩니다.
 
  3. htmllint / scsslint 등의 파일도 같이 들어있지만 개인용 프로젝트용이라 정의는 해두지않았습니다.
+
+
+### error log
+
+    package.json: Name contains illegal characters
+
+-> 어느 버전부터 인지는 정확하게 모르겠지만 package.json의 name뿐만 아니라 description / Author 등에 더이상 대문자와 스페이스가 허용이 안된다. 대문자를 전부 소문자로 바꾸니 에러가 더이상 발생하지 않음.[https://yarnpkg.com/en/docs/cli/add]
+
+    (node:9269) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: EACCES: permission denied
+
+-> watch Task 나 server Task중 이미지 파일(생성/변환/복사)등이 이루어질때 에러남.
+-> node_modules폴더와 yarn.lock 파일을 지우고 새로 설치하면 해결. (정확한 원인은 모르겠음)
+
+    gulp-util@2.2.20: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
+
+-> gulp-util이 불필요하게 너무 많은 dependencies들을 가지고있어 무겁고 오래된방식의 vinyl-stream 방식을 사용하고 있어
+사용자들의 피드백을 받아 gulp-util을 없애고 세분화 시켜서 npm pacakge로 다시 올려놓은듯 하다. 바꾸는데 시간이 좀 걸릴듯 하다.
+(아직까지 사용은 되지만. 위와같은 메시지 출력)
+[https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5]
