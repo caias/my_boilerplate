@@ -1,9 +1,9 @@
 /// 텍스트 세로 정렬
 /// @access public
 /// @group Mixin
-/// @param {$arg} $height [null] - 높이값
-/// @param {$arg} $line-height [$height] - 행간
-/// @param {$arg} $width [null] - 넓이값 ( 넓이값이 필요한 경우))
+/// @param {Number} $height [null] - 높이값
+/// @param {Number} $line-height [$height] - 행간
+/// @param {Number} $width [null] - 넓이값 ( 넓이값이 필요한 경우))
 /// @example scss - Scss
 ///		.foo {
 ///			@include vtext(20px)

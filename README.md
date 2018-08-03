@@ -76,12 +76,12 @@ my-boilerplate/
 
 #### hologram settings
 [https://github.com/trulia/hologram]
-1. gem install hologram
-2. hologram init
+1. `gem install hologram`
+2. `hologram init`
 
 ##### config file
 
-    # markdown기법의 들어가있는 소스파릴의 경로 (.css / .scss / .sass / .less / .styl / .js / .erb / .md / .markdown)
+    # markdown기법의 들어가있는 소스파일의 경로 (.css / .scss / .sass / .less / .styl / .js / .erb / .md / .markdown)
     source: ./src/scss
 
     # WSG가이드 문서가 생설될 폴더 경로 지정
@@ -135,8 +135,8 @@ my-boilerplate/
     /// @access public
     /// @group Mixin
     /// @author LKW
-    /// @param {$arg} $width [null] - 가로사이즈
-    /// @param {$arg} $height [$width] - 세로사이즈
+    /// @param {Number} $width [null] - 가로사이즈
+    /// @param {Number} $height [$width] - 세로사이즈
     /// @example scss - Scss
     ///   .foo {
     ///   	@include size(20px)

@@ -2,8 +2,8 @@
 /// @access public
 /// @group Mixin
 /// @author LKW
-/// @param {$arg} $width [null] - 가로사이즈
-/// @param {$arg} $height [$width] - 세로사이즈
+/// @param {Number} $width [null] - 가로사이즈
+/// @param {Number} $height [$width] - 세로사이즈
 /// @example scss - Scss
 ///		.foo {
 ///			@include size(20px)
