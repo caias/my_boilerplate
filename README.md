@@ -1,6 +1,6 @@
 # my_boilerplate
 
-*__개인 프로젝트용 scaffolding__*
+*__개인 프로젝트용 scaffolding by leekangwon__*
 
 이 저장소는 개인 프로젝트를 위한 scaffolding 저장소로서 개선을 위한 의견이나 필요하신분들은 도움이 됬으면 합니다.
 
@@ -23,7 +23,8 @@ Node.js / npm / gulp / yarn이 설치 되있지 않다면 설치를 꼭 해주�
 - [Yarn](https://yarnpkg.com/lang/en/) `npm install -g yarn`
 
 ## 시작하기
-위에 기본적인 설치가 끝나신 후 터미널 창에 [__yarn__]이라고 입력하시게 되면 package.json을 토대로 필요한 dependencies들이 설치가 되고 설치가 완료됬다면 세팅은 끝입니다.
+위에 기본적인 설치가 끝나신 후 터미널 창에 [__yarn__]이라고 입력하시게 되면 package.json을 토대로 필요한 dependencies들이 설치가 되고  
+설치가 완료됬다면 세팅은 끝입니다.
 
 
 ### file tree view
@@ -71,7 +72,8 @@ my-boilerplate/
 - [gulp spsass] : 이미지 스프라이트후에 sass/scss 컴파일까지 같이 실행되는 명령어
 - [gulp clean] : dist 폴더 삭제
 - [gulp watch] : 작업중에 변경되는 파일을 감지하여 바뀐파일의 정보를 알려주며 sass/scss파일 수정시 자동 컴파일  
-- [gulp server] : brower-sync를 사용, 기본토프(port3000)을 통해 로컬서버를 실행하게됩니다.  기본적으로 watch기능이 같이 사용되며, 파일 수정후 저장시 livereload도 같이 작동됩니다.
+- [gulp server] : brower-sync를 사용, 기본토프(port3000)을 통해 로컬서버를 실행하게됩니다.   
+ 기본적으로 watch기능이 같이 사용되며, 파일 수정후 저장시 livereload도 같이 작동됩니다.
 
 
 #### hologram settings
@@ -158,9 +160,9 @@ my-boilerplate/
 
 ### 기타 Notice
 
- 1. 자동 이미지 스프라이트를 쓸때 같은 background-image-url의 불필요한 반복 선언을 막기위해서 개인적으로는 파일
-    [node_modules/spritesheet-templates/lib/templates/scss.template.handlebars] 의 line93 : @include sprite-image($sprite);
-    이부분을 삭제하고 따로 한번만 선언해서 사용합니다.
+ 1. 자동 이미지 스프라이트를 쓸때 같은 background-image-url의 불필요한 반복 선언을 막기위해서 개인적으로는 파일  
+    [node_modules/spritesheet-templates/lib/templates/scss.template.handlebars] 의   
+    line93 : @include sprite-image($sprite); 이부분을 삭제하고 따로 한번만 선언해서 사용합니다.
 
  2. watch가 작동되고 있을 때 컴파일시에 에러가 날 경우 실수 방지를 위해 compile관련 명령어들 전부 사용중지되므로, ctrl+c로 watch Task 또는 Server Task를 중지하고 재실행 해야됩니다.
 
@@ -171,16 +173,18 @@ my-boilerplate/
 
     package.json: Name contains illegal characters
 
--> 어느 버전부터 인지는 정확하게 모르겠지만 package.json의 name뿐만 아니라 description / Author 등에 더이상 대문자와 스페이스가 허용이 안된다. 대문자를 전부 소문자로 바꾸니 에러가 더이상 발생하지 않음.[https://yarnpkg.com/en/docs/cli/add]
+-> 어느 버전부터 인지는 정확하게 모르겠지만 package.json의 name뿐만 아니라 description / Author 등에 더이상 대문자와 스페이스가 허용이 안된다.    
+대문자를 전부 소문자로 바꾸니 에러가 더이상 발생하지 않음.   
+[https://yarnpkg.com/en/docs/cli/add]
 
     (node:9269) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: EACCES: permission denied
 
--> watch Task 나 server Task중 이미지 파일(생성/변환/복사)등이 이루어질때 에러남.
+-> watch Task 나 server Task중 이미지 파일(생성/변환/복사)등이 이루어질때 에러남.  
 -> node_modules폴더와 yarn.lock 파일을 지우고 새로 설치하면 해결. (정확한 원인은 모르겠음)
 
     gulp-util@2.2.20: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
 
--> gulp-util이 불필요하게 너무 많은 dependencies들을 가지고있어 무겁고 오래된방식의 vinyl-stream 방식을 사용하고 있어
-사용자들의 피드백을 받아 gulp-util을 없애고 세분화 시켜서 npm pacakge로 다시 올려놓은듯 하다. 바꾸는데 시간이 좀 걸릴듯 하다.
+-> gulp-util이 불필요하게 너무 많은 dependencies들을 가지고있어 무겁고 오래된방식의 vinyl-stream 방식을 사용하고 있어  
+사용자들의 피드백을 받아 gulp-util을 없애고 세분화 시켜서 npm pacakge로 다시 올려놓은듯 하다. 바꾸는데 시간이 좀 걸릴듯 하다.  
 (아직까지 사용은 되지만. 위와같은 메시지 출력)
 [https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5]
