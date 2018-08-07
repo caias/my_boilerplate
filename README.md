@@ -168,6 +168,8 @@ my-boilerplate/
     basic image sprite folder = __/src/images/sprtie/img_sprite/**/*__    
     retina image sprite folder = __/src/images/sprtie/retina/**/*__    
     (retina image sprite를 쓰실경우 1x 이미지와 2x이미지가 같이 세트로 레티나전용 폴더에 있어야만 에러가 안납니다.)    
+    일반 이미지 스프라이트 파일들은 그냥 폴더경로에 맞게 넣어주시면 되고,     
+    retina 이미지 인 경우에는 image.png / image@2x.png 처러 파일뒤에 @2x를 붙여서 세트로 넣어야 됩니다.
 
  2. watch가 작동되고 있을 때 컴파일시에 에러가 날 경우 실수 방지를 위해 compile관련 명령어들 전부 사용중지되므로,    
     ctrl+c로 watch Task 또는 Server Task를 중지하고 재실행 해야됩니다.
