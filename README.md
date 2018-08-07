@@ -160,13 +160,14 @@ my-boilerplate/
 
 ### 기타 Notice
 
- 1. 자동 이미지 스프라이트를 쓸때 같은 background-image-url의 불필요한 반복 선언을 막기위해서 개인적으로는 파일  
-    [node_modules/spritesheet-templates/lib/templates/scss.template.handlebars] 의   
-    line93 : @include sprite-image($sprite); 이부분을 삭제하고 따로 한번만 선언해서 사용합니다.
+ 1. auto image sprite 의 템플릿을 수정하고 싶을 경우 sprite_templates폴더에 있는 hbs(handlebars)를 취향에 따라 수정해서 쓰시면 됩니다.  
+    basic image sprite = __mysprite.scss.handlebars__   
+    retina image sprite = __myretina.scss.handlebars__   
 
- 2. watch가 작동되고 있을 때 컴파일시에 에러가 날 경우 실수 방지를 위해 compile관련 명령어들 전부 사용중지되므로, ctrl+c로 watch Task 또는 Server Task를 중지하고 재실행 해야됩니다.
+ 2. watch가 작동되고 있을 때 컴파일시에 에러가 날 경우 실수 방지를 위해 compile관련 명령어들 전부 사용중지되므로,    
+    ctrl+c로 watch Task 또는 Server Task를 중지하고 재실행 해야됩니다.
 
- 3. htmllint / scsslint 등의 파일도 같이 들어있지만 개인용 프로젝트용이라 정의는 해두지않았습니다.
+ 3. htmllint / scsslint 등의 파일도 같이 들어있지만 개인용 프로젝트용이라 정의는 해두지 않았습니다.
 
 
 ### error log

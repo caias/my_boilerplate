@@ -22,7 +22,10 @@ const config = {
     },
 
     sprite:{
-        src     : 'src/images/sprite/**/*.png',
+        src     : [
+                    'src/images/sprite/**/*.png',
+                    '!src/images/sprite/retina/*.png'
+                ],
         dest    : 'dist/images/sprite'
     },
 

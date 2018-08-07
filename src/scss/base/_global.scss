@@ -2,25 +2,6 @@
 	overflow-y:auto;
 }
 
-%sprite{
-  background-image:url('#{$sprite}')
-}
-
-[class^="spr-"] {
-  background-image:url('#{$sprite}')
-}
-
-.spr-btn-color{
-	@include sprite($btn_go_related);
-}
-
-.grid-wrap{
-	@include grid(2,18px);
-}
-
-
-
-
 .sr-only{
   @include sr-only();
 }

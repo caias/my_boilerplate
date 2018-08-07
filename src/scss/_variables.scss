@@ -41,6 +41,8 @@ $content-center-size:1158px !default;
 // $img_url : '../../dist/images/sprite';
 $img_url : '/dist/images';
 $sprite : '#{$img_url}/sprite/img_sprite.png';
+$img-retina : '#{$img_url}/sprite/retina.png';
+$img-retina2x : '#{$img_url}/sprite/retina2x.png';
 
 //border basic style - border mixin 관련
 $bd-basic-color:color(black,2) !default;
@@ -56,7 +58,3 @@ $z-indexes: (
   dim         : 150,
   navigation  : 100
 );
-
-// rem변환시 하위 브라우져 및 하위 OS를 위해 px값을 같이 compile할지에 대한 여부
-$with-px: false;
-$rem-baseSize: 16 !default;

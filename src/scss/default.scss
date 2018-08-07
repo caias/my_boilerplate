@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&subset=korean');
+@import "function/__function";
 @import 'variables';
 @import "vendors/sprite/*.scss";
-@import "function/__function";
 @import "mixin/__mixin";
 @import "placeholder/__placeholder";
 @import "base/__base";
@@ -97,4 +97,14 @@
   .a{
     font-size:12px;
   }
+}
+
+.retina-fork{
+  @include retina-sprite($fork-group);
+}
+.retina-github{
+  @include retina-sprite($github-group);
+}
+.retina-twitter{
+  @include retina-sprite($twitter-group);
 }
