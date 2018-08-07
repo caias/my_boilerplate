@@ -29,6 +29,11 @@ const config = {
         dest    : 'dist/images/sprite'
     },
 
+    retina:{
+        src     : 'src/images/sprite/retina/*.png',
+        dest    : 'dist/images/sprite'
+    },
+
     lint:{
         scss : 'gulp/scsslint.yml',
         html : 'gulp/.htmllintrc.json'

@@ -14,7 +14,7 @@ module.exports = (gulp, $, config) => {
              server: {
                 baseDir: "./",
                 port: '3000',
-                index:'index.html'
+                index:'work.html'
             }
         });
     });
@@ -24,7 +24,9 @@ module.exports = (gulp, $, config) => {
             scss   : gulp.watch(config.scss.src, ['sass']),
             html   : gulp.watch(config.html.src, ['html']),
             images : gulp.watch(config.image.src, ['images']),
-            sprite : gulp.watch(config.sprite.src, ['spsass'])
+            sprite : gulp.watch(config.sprite.src, ['spsass']),
+            retina : gulp.watch(config.retina.src, ['spsass']),
+
         };
 
         let notify = (event) => {

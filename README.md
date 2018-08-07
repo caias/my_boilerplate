@@ -68,8 +68,9 @@ my-boilerplate/
 - [gulp hologram] : WSG(web style guide)문서를 만들어주는 명령어
 - [gulp sass] : sass/scss -> css 컴파일해서 dist폴더에 복사합니다.
 - [gulp images] : 이미지 파일들을 압축하여 dist폴더로 복사합니다.
-- [gulp sprite] : 자동 이미지 스프라이트 작업을 위한 명령어.
-- [gulp spsass] : 이미지 스프라이트후에 sass/scss 컴파일까지 같이 실행되는 명령어
+- [gulp sprite] : 자동 이미지 스프라이트 작업을 위한 명령어.(basic sprite)
+- [gulp sprite-retina] : 자동 이미지 스프라이트 작업을 위한 명령어.(retina sprite)
+- [gulp spsass] : 이미지 스프라이트(basic&retina)후에 sass/scss 컴파일까지 같이 실행되는 명령어
 - [gulp clean] : dist 폴더 삭제
 - [gulp watch] : 작업중에 변경되는 파일을 감지하여 바뀐파일의 정보를 알려주며 sass/scss파일 수정시 자동 컴파일  
 - [gulp server] : brower-sync를 사용, 기본토프(port3000)을 통해 로컬서버를 실행하게됩니다.   
@@ -162,7 +163,10 @@ my-boilerplate/
 
  1. auto image sprite 의 템플릿을 수정하고 싶을 경우 sprite_templates폴더에 있는 hbs(handlebars)를 취향에 따라 수정해서 쓰시면 됩니다.  
     basic image sprite = __mysprite.scss.handlebars__   
-    retina image sprite = __myretina.scss.handlebars__   
+    retina image sprite = __myretina.scss.handlebars__     
+    basic image sprite folder = __/src/images/sprtie/img_sprite/**/*__
+    retina image sprite folder = __/src/images/sprtie/retina/**/*__
+    (retina image sprite를 쓰실경우 1x 이미지와 2x이미지가 같이 세트로 레티나전용 폴더에 있어야만 에러가 안납니다.)    
 
  2. watch가 작동되고 있을 때 컴파일시에 에러가 날 경우 실수 방지를 위해 compile관련 명령어들 전부 사용중지되므로,    
     ctrl+c로 watch Task 또는 Server Task를 중지하고 재실행 해야됩니다.

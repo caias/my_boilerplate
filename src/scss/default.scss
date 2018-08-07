@@ -108,3 +108,7 @@
 .retina-twitter{
   @include retina-sprite($twitter-group);
 }
+
+.spr-aksd{
+  @include sprite($btn_go_related);
+}

@@ -61,7 +61,7 @@ module.exports = (gulp, $, config) => {
 
       const cssStream = data.css
         .pipe(gulp.dest('src/scss/vendors/sprite/'));
-        
+
       return $.mergeStream(imgStream, cssStream);
     });
 
@@ -70,12 +70,12 @@ module.exports = (gulp, $, config) => {
     });
 
     gulp.task('spsass' , () => {
-        $.runSequence('cleansp' ,'sprite' , 'sass' )
+        $.runSequence('cleansp' , 'sprite' , 'sprite-retina' , 'sass' )
     });
 
-    gulp.task('retina-spsass' , () => {
-        $.runSequence('cleansp' ,'sprite-retina' , 'sass' )
-    });
+    // gulp.task('retina-spsass' , () => {
+    //     $.runSequence('cleansp' , 'spsass' , 'sprite-retina' , 'sass' )
+    // });
 
 
 };

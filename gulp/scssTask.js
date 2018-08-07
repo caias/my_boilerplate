@@ -14,6 +14,14 @@ module.exports = (gulp, $, config) => {
     const args = minimist(process.argv.slice(2));
     const environment = args.env;
 
+    const scssOptions = {
+      outputStyle: environment == 'prod' ? 'compressed' : 'nested',
+      indentType: "space",
+      indentWidth: 2,
+      precision: 6,
+      linefeed:'lf'
+    };
+
     const onError = (err) => {
         log(colors.red("ERROR"), err);
         //throw new Error(colors.green("info") + '::' + err);
@@ -29,7 +37,8 @@ module.exports = (gulp, $, config) => {
         //.pipe($.cached('scssLint'))
         // .pipe($.scssLint({'config': config.lint.scss}))
         //.pipe($.if(environment === 'prod' , $.scssLint.failReporter() ))
-        .pipe($.sass({outputStyle: 'expanded'}).on('error', onError))
+        // .pipe($.sass({outputStyle: 'expanded'}).on('error', onError))
+        .pipe($.sass(scssOptions).on('error', onError))
         // .pipe($.rename( (file) => {
         //     if( file.dirname  === 'common' ){
         //     }
