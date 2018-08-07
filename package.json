@@ -1,10 +1,10 @@
 {
   "name": "scaffolding",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "ui-devloper resource",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "build": "gulp clean && gulp --env=prod sass && gulp prefix"
+    "build": "gulp clean && gulp --env=prod spsass && gulp prefix"
   },
   "repository": {
     "type": "git",
