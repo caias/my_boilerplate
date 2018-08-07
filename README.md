@@ -75,6 +75,7 @@ my-boilerplate/
 - [gulp watch] : 작업중에 변경되는 파일을 감지하여 바뀐파일의 정보를 알려주며 sass/scss파일 수정시 자동 컴파일  
 - [gulp server] : brower-sync를 사용, 기본토프(port3000)을 통해 로컬서버를 실행하게됩니다.   
  기본적으로 watch기능이 같이 사용되며, 파일 수정후 저장시 livereload도 같이 작동됩니다.
+- [yarn run build] : 빌드버전을 위한 명령어로 scss컴파일이 compressed로 되며, sourcemap제거 및 vendor-prefix가 붙어서 나오게 됩니다.
 
 
 #### hologram settings
@@ -164,8 +165,8 @@ my-boilerplate/
  1. auto image sprite 의 템플릿을 수정하고 싶을 경우 sprite_templates폴더에 있는 hbs(handlebars)를 취향에 따라 수정해서 쓰시면 됩니다.  
     basic image sprite = __mysprite.scss.handlebars__   
     retina image sprite = __myretina.scss.handlebars__     
-    basic image sprite folder = __/src/images/sprtie/img_sprite/**/*__
-    retina image sprite folder = __/src/images/sprtie/retina/**/*__
+    basic image sprite folder = __/src/images/sprtie/img_sprite/**/*__    
+    retina image sprite folder = __/src/images/sprtie/retina/**/*__    
     (retina image sprite를 쓰실경우 1x 이미지와 2x이미지가 같이 세트로 레티나전용 폴더에 있어야만 에러가 안납니다.)    
 
  2. watch가 작동되고 있을 때 컴파일시에 에러가 날 경우 실수 방지를 위해 compile관련 명령어들 전부 사용중지되므로,    
