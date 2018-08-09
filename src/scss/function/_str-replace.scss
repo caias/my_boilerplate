@@ -4,12 +4,12 @@
 /// @author Hugo Giraudel
 /// @param {String} $string - Initial string
 /// @param {String} $search - Substring to replace
-/// @param {String} $replace ('') - New value
+/// @param {String} $replace ("") - New value
 /// @return {String} - Updated string
 /// @example scss - Scss
 /// .selector {
-///   $string: 'aaaa';
-///   content: str-replace($string, 'a', 'b');
+///   $string: "aaaa";
+///   content: str-replace($string, "a", "b");
 /// }
 /// @example css - Compile css
 /// .selector {
@@ -17,7 +17,7 @@
 /// }
 ///
 
-@function str-replace($string, $search, $replace: '') {
+@function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
 
   @if $index {

@@ -10,7 +10,8 @@
     "marginheight",
     "scrolling",
     "style",
-    "width"
+    "width",
+    "height"
   ],
   "attr-name-ignore-regex": false,
   "attr-name-style": "dash",
@@ -25,7 +26,7 @@
   "attr-req-value": true,
   "class-no-dup": true,
   "class-style": "",
-  "doctype-first": true,
+  "doctype-first": "smart",
   "doctype-html5": true,
   "fig-req-figcaption": true,
   "focusable-tabindex-style": true,
@@ -35,13 +36,13 @@
   "html-req-lang": false,
   "html-valid-content-model": true,
   "id-class-ignore-regex": false,
-  "id-class-no-ad": true,
+  "id-class-no-ad": false,
   "id-class-style": "",
   "id-no-dup": true,
   "img-req-alt": true,
   "img-req-src": true,
   "indent-style": "tabs",
-  "indent-width": 2,
+  "indent-width": 4,
   "indent-width-cont": false,
   "input-radio-req-name": true,
   "input-req-label": true,
@@ -55,13 +56,12 @@
   "table-req-header": true,
   "tag-bans": [
     "b",
-    "i",
-    "style"
+    "i"
   ],
   "tag-close": true,
   "tag-name-lowercase": true,
   "tag-name-match": true,
-  "tag-self-close": "always",
+  "tag-self-close": false,
   "title-max-len": 65,
   "title-no-dup": true
 }

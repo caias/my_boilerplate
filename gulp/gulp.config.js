@@ -4,7 +4,7 @@ const pkg = require('../package.json');
 const config = {
 
     html : {
-        src     : '**/*.html',
+        src     : 'src/html/**/*.html',
         dest    : 'dist/html'
     },
 

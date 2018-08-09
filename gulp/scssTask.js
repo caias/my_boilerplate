@@ -15,11 +15,11 @@ module.exports = (gulp, $, config) => {
     const environment = args.env;
 
     const scssOptions = {
-      outputStyle: environment == 'prod' ? 'compressed' : 'nested',
+      outputStyle: environment == 'prod' ? 'compressed' : 'expanded', // nested, expanded, compact, compressed
       indentType: "space",
-      indentWidth: 2,
+      indentWidth: 2, // maximum:10
       precision: 6,
-      linefeed:'lf'
+      linefeed:'lf' // cr , crlf, lf , lfcr
     };
 
     const onError = (err) => {
@@ -32,10 +32,10 @@ module.exports = (gulp, $, config) => {
         .src(config.scss.src)
         .pipe($.sassGlob())
         .pipe($.if(environment !== 'prod' , $.sourcemaps.init() ))
-        .pipe($.if(environment !== 'prod' , $.plumber({errorHandler:false}) ))
-        .pipe($.plumber({errorHandler:false}))
-        //.pipe($.cached('scssLint'))
-        // .pipe($.scssLint({'config': config.lint.scss}))
+        // .pipe($.if(environment !== 'prod' , $.plumber({errorHandler:false}) ))
+        .pipe($.plumber({errorHandler:true}))
+        .pipe($.cached('scssLint'))
+        .pipe($.scssLint({'config': config.lint.scss}))
         //.pipe($.if(environment === 'prod' , $.scssLint.failReporter() ))
         // .pipe($.sass({outputStyle: 'expanded'}).on('error', onError))
         .pipe($.sass(scssOptions).on('error', onError))

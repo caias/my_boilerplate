@@ -13,18 +13,18 @@
 ///		}
 /// @example css - Compile css
 ///		.foo{
-///			 width:22px;
-///			 height:22px;
-///			 position:relative;
+///			 width: 22px;
+///			 height: 22px;
+///			 position: relative;
 ///			 &:after,
 ///			 &:before{
-///        content:'';
-///        position:absolute;
-///        left:50%;
-///        top:50%;
-///        width:29px;
-///        height:2px;
-///        background-color:#000;
+///        content: "";
+///        position: absolute;
+///        left: 50%;
+///        top: 50%;
+///        width: 29px;
+///        height: 2px;
+///        background-color: #000;
 ///      }
 ///			 &:after{
 ///        transform: translate(-50%, -50%) rotate(45deg);
@@ -35,16 +35,16 @@
 ///		 }
 ///
 
-@mixin ic-x($size:null, $thick:2px, $padding:0, $color:#000, $position:relative){
-  width:$size + $padding * 2;
-  height:$size + $padding * 2;
+@mixin ic-x($size: null, $thick: 2px, $padding: 0, $color: #000, $position: relative){
+  width: $size + $padding * 2;
+  height: $size + $padding * 2;
   &:after,
   &:before{
-    content:'';
-    @include poslt(50%,50%);
-    width:round($size * $sqrt2 - $thick);
-    height:$thick;
-    background-color:$color;
+    content: "";
+    @include poslt(50%, 50%);
+    width: round($size * $sqrt2 - $thick);
+    height: $thick;
+    background-color: $color;
   }
   &:after{
     transform: translate(-50%, -50%) rotate(45deg);

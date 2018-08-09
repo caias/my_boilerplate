@@ -10,39 +10,39 @@
 ///			@include center-position(1000px,500px);
 ///		}
 ///		.bar {
-///			@include center-position(1000px,$position:fixed);
+///			@include center-position(1000px,$position: fixed);
 ///		}
 ///		.baz {
-///			@include center-position($height:500px);
+///			@include center-position($height: 500px);
 ///		}
 /// @example css - Compile css
 ///		.foo{
-///			 position:absolute;
-///			 top:50%;
-///			 left:50%;
-///			 width:1000px;
-///			 height:500px;
-///			 margin:-250px 0 0 -500px;
+///			 position: absolute;
+///			 top: 50%;
+///			 left: 50%;
+///			 width: 1000px;
+///			 height: 500px;
+///			 margin: -250px 0 0 -500px;
 ///		 }
 ///		.bar{
-///			 position:fixed;
-///			 top:50%;
-///			 left:50%;
-///			 width:1000px;
-///			 margin-left:-500px;
+///			 position: fixed;
+///			 top: 50%;
+///			 left: 50%;
+///			 width: 1000px;
+///			 margin-left: -500px;
 ///			 transform: translateY(-50%);
 ///		 }
 ///		.baz{
-///			 position:absolute;
-///			 top:50%;
-///			 left:50%;
-///			 height:500px;
-///			 margin-top:-250px;
+///			 position: absolute;
+///			 top: 50%;
+///			 left: 50%;
+///			 height: 500px;
+///			 margin-top: -250px;
 ///			 transform: translateX(-50%);
 ///		 }
 ///
 
-@mixin center-position($width: null, $height: null, $position:absolute) {
+@mixin center-position($width: null, $height: null, $position: absolute) {
   position: $position;
   top: 50%;
   left: 50%;

@@ -32,27 +32,20 @@
   @if $type == string {
     @if $min == mo {
       @media only screen and (max-width: 767px) { @content; }
-    }
-    @else if $min == tablet {
+    } @else if $min == tablet {
       @media only screen and (max-width: 1024px) { @content; }
-    }
-    @else if $min == pc {
+    } @else if $min == pc {
       @media only screen and (min-width: 1200px) { @content; }
-    }
-    @else {
+    } @else {
       @warn "breakpoint mixin에는 mo, tablet, pc 3가지만 존재하고있습니다. 확인해주세요.";
     }
-  }
-
-  @else if $type == number {
+  } @else if $type == number {
     $query: "all" !default;
     @if $min != 0 and $max != 0 {
       $query: "(min-width: #{$min}) and (max-width: #{$max})";
-    }
-    @else if $min != 0 and $max == 0 {
+    } @else if $min != 0 and $max == 0 {
       $query: "(min-width: #{$min})";
-    }
-    @else if $min == 0 and $max != 0 {
+    } @else if $min == 0 and $max != 0 {
       $query: "(max-width: #{$max})";
     }
     @media only screen and #{$query} {
@@ -62,14 +55,14 @@
 }
 
 // media query 참고용
-$phone : '(max-width: 480px)';
-$tablet-portrait: '(max-width: 767px)';
-$tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
-$large-desktop: '(min-width: 1200px)';
-$non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)';
-$retina: '(min--moz-device-pixel-ratio: 1.5),
+$phone : "(max-width: 480px)";
+$tablet-portrait: "(max-width: 767px)";
+$tablet-landscape: "(min-width: 768px) and (max-width: 979px)";
+$large-desktop: "(min-width: 1200px)";
+$non-retina: "screen and (-webkit-max-device-pixel-ratio: 1)";
+$retina: "(min--moz-device-pixel-ratio: 1.5),
           (-o-min-device-pixel-ratio: 3/2),
           (-webkit-min-device-pixel-ratio: 1.5),
           (min-device-pixel-ratio: 1.5),
           (min-resolution: 144dpi),
-          (min-resolution: 1.5dppx)';
+          (min-resolution: 1.5dppx)";

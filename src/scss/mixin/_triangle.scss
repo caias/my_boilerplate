@@ -12,30 +12,30 @@
 ///		}
 /// @example css - Compile css
 ///   .foo:after {
-///     content:'';
+///     content: "";
 ///     border-bottom: 10px solid #000;
 ///     border-left: 10px solid transparent;
 ///     border-right: 10px solid transparent;
 ///   }
 ///
 
-@mixin triangle($direction:'up', $width:20px, $height:10px, $color:#000){
-  content:'';
-  @if ($direction == 'up') {
+@mixin triangle($direction: "up", $width: 20px, $height: 10px, $color: #000){
+  content: "";
+  @if ($direction == "up") {
     border-bottom: $height solid $color;
-    border-left: round($width/2) solid transparent;
-    border-right: round($width/2) solid transparent;
-  } @else if ($direction == 'down') {
+    border-left: round($width / 2) solid transparent;
+    border-right: round($width / 2) solid transparent;
+  } @else if ($direction == "down") {
     border-top: $height solid $color;
-    border-left: round($width/2) solid transparent;
-    border-right: round($width/2) solid transparent;
-  } @else if ($direction == 'left') {
-    border-top: round($height/2) solid transparent;
-    border-bottom: round($height/2) solid transparent;
+    border-left: round($width / 2) solid transparent;
+    border-right: round($width / 2) solid transparent;
+  } @else if ($direction == "left") {
+    border-top: round($height / 2) solid transparent;
+    border-bottom: round($height / 2) solid transparent;
     border-right: $width solid $color;
-  } @else if ($direction == 'right') {
-    border-top: round($height/2) solid transparent;
-    border-bottom: round($height/2) solid transparent;
+  } @else if ($direction == "right") {
+    border-top: round($height / 2) solid transparent;
+    border-bottom: round($height / 2) solid transparent;
     border-left: $width solid $color;
   }
 }

@@ -5,29 +5,29 @@
 /// @return {unit} - rem  or px
 /// @example scss - Scss
 ///		.foo {
-///			font-size:rem(14);
+///			font-size: rem(14);
 ///		}
 ///		.bar {
-///			margin-top:rem(4px);
+///			margin-top: rem(4px);
 ///		}
 ///		.baz {
-///			font-size:rem(1rem);
+///			font-size: rem(1rem);
 ///		}
 /// @example css - Compile css
 ///		.foo{
-///			 font-size:224px;
+///			 font-size: 224px;
 ///		 }
 ///		.bar{
-///			 font-size:0.875rem;
+///			 font-size: 0.875rem;
 ///		 }
 ///		.baz{
-///			 font-size:16px;
+///			 font-size: 16px;
 ///		 }
 ///
 
 @function rem($value) {
-	$root: $rem-baseSize;
-	$val: parseInt($value);
+	$root: $rem-base-size;
+	$val: strip-unit($value);
 	$return: ();
 
 	@if unit($value) == "px" {
@@ -37,8 +37,4 @@
 	}
 
 	@return $return;
-}
-
-@function parseInt($n) {
-  @return $n / ($n * 0 + 1);
 }

@@ -1,8 +1,8 @@
 $palettes: (
-  white:(
+  white: (
     1: #fff
   ),
-  blue:(
+  blue: (
     1: #305ec8,
     2: #4776e1,
     3: #1883d7,
@@ -25,29 +25,29 @@ $palettes: (
 		11: #303030,
 		12: #d8d7d6
   ),
-	red:(
+	red: (
 		1: #ed1c24,
 		2: #aa070d
 	),
 );
 
 //reset 폰트 관련
-$font-color-base:color(black,1) !default;
-$font-size-base:rem(16px) !default;
-$font-family-base:'Nanum Gothic','돋움',Dotum,sans-serif !default;
-$content-center-size:1158px !default;
+$font-color-base: color(black, 1) !default;
+$font-size-base: rem(16px) !default;
+$font-family-base: "Nanum Gothic", "돋움", Dotum, sans-serif !default;
+$content-center-size: 1158px !default;
 
 // 이미지 경로 관련 variable
-// $img_url : '../../dist/images/sprite';
-$img_url : '/dist/images';
-$sprite : '#{$img_url}/sprite/img_sprite.png';
-$img-retina : '#{$img_url}/sprite/retina.png';
-$img-retina2x : '#{$img_url}/sprite/retina2x.png';
+// $img-url : "../../dist/images/sprite";
+$img-url : "/dist/images";
+$sprite : "#{$img-url}/sprite/img_sprite.png";
+$img-retina : "#{$img-url}/sprite/retina.png";
+$img-retina2x : "#{$img-url}/sprite/retina2x.png";
 
 //border basic style - border mixin 관련
-$bd-basic-color:color(black,2) !default;
-$bd-basic-style:solid !default;
-$bd-basic-width:1px !default;
+$bd-basic-color: color(black, 2) !default;
+$bd-basic-style: solid !default;
+$bd-basic-width: 1px !default;
 
 // route2
 $sqrt2 : 1.41421356237;

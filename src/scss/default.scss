@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&subset=korean');
+@import url("https: //fonts.googleapis.com/css?family=Nanum+Gothic: 400,700&subset=korean");
 @import "function/__function";
-@import 'variables';
+@import "variables";
 @import "vendors/sprite/*.scss";
 @import "mixin/__mixin";
 @import "placeholder/__placeholder";
@@ -10,9 +10,8 @@
 
 
 .triangle{
-  height:20px;
-  position:relative;
-  background:blue;
+  height: 20px;
+  position: relative;
   &:after{
     @include triangle();
     @include posrt();
@@ -25,22 +24,20 @@
 
 
 .angle{
-  height:20px;
-  width:100px;
-  position:relative;
-  border:1px solid #ddd;
+  @include bd();
   @include vtext(33px);
+  @include size(100px, 20px);
+  @include ic-angle(down, $right: 10px, $hover: true);
+  position: relative;
   text-align: center;
-  background-color: #f9f9f9;
-  @include ic-angle(down,$right:10px,$hover:true);
+  background-color: color(black, 2);
 }
 
 .hamburger{
-  background:red;
-  display:inline-block;
-  overflow:hidden;
+  display: inline-block;
+  overflow: hidden;
   span{
-    @include ic-hamburger($padding:5px,$color:#fff);
+    @include ic-hamburger($padding: 5px, $color: color(black, 1));
   }
 }
 
@@ -50,52 +47,52 @@
 
 
 .a1{
-  @include rem(font-size,12px);
+  @include rem(font-size, 12px);
 }
 .a2{
-  @include rem(font-size,14px);
+  @include rem(font-size, 14px);
 }
 .a3{
-  @include rem(font-size,16px);
+  @include rem(font-size, 16px);
 }
 .a4{
-  @include rem(font-size,18px);
+  @include rem(font-size, 18px);
 }
 .a5{
-  @include rem(font-size,20px);
-  @include bd($bd-width:1px 2px 3px 4px);
+  @include rem(font-size, 20px);
+  @include bd($bd-width: 1px 2px 3px 4px);
 }
 .a6{
-  @include rem(font-size,22px);
+  @include rem(font-size, 22px);
 }
 
 
 .ssd{
-  @include rem(top,10px);
+  @include rem(top, 10px);
 }
 
 .ic-arrow{
-  display:inline-block;
-  padding-right:30px;
   @include relative();
+  display: inline-block;
+  padding-right: 30px;
   .arrow{
-    @include ic-arrow($position:absolute);
+    @include ic-arrow($position: absolute);
   }
 }
 
 @include bp(mo){
   .a{
-    font-size:12px;
+    font-size: 12px;
   }
 }
 @include bp(320px){
   .a{
-    font-size:12px;
+    font-size: 12px;
   }
 }
-@include bp(769px,1023px){
+@include bp(769px, 1023px){
   .a{
-    font-size:12px;
+    font-size: 12px;
   }
 }
 
@@ -110,5 +107,5 @@
 }
 
 .spr-aksd{
-  @include sprite($btn_go_related);
+  @include sprite($btn-go-related);
 }

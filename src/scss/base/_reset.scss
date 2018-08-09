@@ -16,18 +16,20 @@ time, mark, audio, video{
 	border: 0;
 }
 
+@include sticky-footer(200px);
+
 html {
-  height:100%;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-  color:$font-color-base;
+  color: $font-color-base;
 	font-family: $font-family-base;
-  font-size:$font-size-base;
+  font-size: $font-size-base;
 	word-break: break-all;
-  line-height:1.15;
-	height:100%;
+  line-height: 1.15;
+	height: 100%;
   -ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -38,25 +40,19 @@ address,cite,code,dfn,em,var {
 }
 
 caption{
-	width:0;
-	height:0;
-	overflow:hidden;
+	width: 0;
+	height: 0;
+	overflow: hidden;
 }
 
 ul,ol,li{
-  list-style:none;
+  list-style: none;
 }
 
 img{
-  font-size:0;
+  font-size: 0;
 }
 
 blockquote{
   quotes: none;
-}
-
-blockquote:before,
-blockquote:after{
-  content: '';
-  content: none;
 }

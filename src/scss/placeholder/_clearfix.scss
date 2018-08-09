@@ -7,15 +7,15 @@
 ///			@extend %clearfix
 ///		}
 /// @example css - Compile css
-///   .foo::after {
-///     content:'';
-///     display:table;
-///     clear:both;
+///   .foo:after {
+///     content: "";
+///     display: table;
+///     clear: both;
 ///   }
 
 %clearfix {
-  &::after {
-    content: '';
+  &:after {
+    content: "";
     display: table;
     clear: both;
   }

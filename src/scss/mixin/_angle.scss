@@ -13,7 +13,7 @@
 /// @param {String} $active [null] - 활성화시에 반대방향 활성화 클래스가 필요한경우 클래스 입력
 /// @example scss - Scss
 ///    .foo {
-///      @include ic-angle(down,$right:10px,$hover:true,$active:active);
+///      @include ic-angle(down,$right: 10px,$hover: true,$active: active);
 ///    }
 /// @example css - Compile css
 ///    .foo:before{
@@ -37,22 +37,22 @@
 ///    }
 ///
 
-@mixin ic-angle($direction: 'down', $width: 14px, $height: 7px, $thick: 1px, $color: #222, $right:null, $left:null, $hover:null, $active:false) {
+@mixin ic-angle($direction: "down", $width: 14px, $height: 7px, $thick: 1px, $color: #222, $right: null, $left: null, $hover: null, $active: false) {
 
-  $angle-default-css:(
-    content:'',
-    border-color:$color,
-    border-style:solid,
-    position:absolute,
-    top:50%
+  $angle-default-css: (
+    content: "",
+    border-color: $color,
+    border-style: solid,
+    position: absolute,
+    top: 50%
   );
 
-  @if ($direction == 'up' or $direction == 'down') {
+  @if ($direction == "up" or $direction == "down") {
 
-    $size: floor($width/$sqrt2 - 2*$thick);
-    $rate: 2*$height/$width;
+    $size: floor($width / $sqrt2 - 2 * $thick);
+    $rate: 2 * $height / $width;
     //$margin-top: round($rate*$size/(2*$sqrt2));
-    $margin-top: $rate*$size/(2*$sqrt2);
+    $margin-top: $rate * $size / (2 * $sqrt2);
 
     &:before{
       @include get-list($angle-default-css);
@@ -60,11 +60,11 @@
       height: $size;
 
       @if ($right) {
-        right:$right;
+        right: $right;
       }@else if($left){
-        left:$left;
+        left: $left;
       }@else{
-        left:50%;
+        left: 50%;
       }
 
       @if ($rate == 1) {
@@ -75,70 +75,70 @@
           transform: translate(-50%, -50%) scale(1, $rate) rotate(45deg);
       }
 
-      @if ($direction == 'up') {
+      @if ($direction == "up") {
         margin-top: $margin-top;
-        border-width:$thick 0 0 $thick;
-      } @else if ($direction == 'down') {
+        border-width: $thick 0 0 $thick;
+      } @else if ($direction == "down") {
         margin-top: - $margin-top;
-        border-width:0 $thick $thick 0;
+        border-width: 0 $thick $thick 0;
       }
     }
 
-    @if ($direction == 'up') {
+    @if ($direction == "up") {
 
       @if ($hover == true and $active){
         &:hover:before,
         &.#{$active}:before{
           margin-top: - $margin-top;
-          border-width:0 $thick $thick 0;
+          border-width: 0 $thick $thick 0;
         }
       }@else if ($hover == true){
         &:hover:before{
           margin-top: - $margin-top;
-          border-width:0 $thick $thick 0;
+          border-width: 0 $thick $thick 0;
         }
       }@else if ($active){
         &.#{$active}:before{
           margin-top: - $margin-top;
-          border-width:0 $thick $thick 0;
+          border-width: 0 $thick $thick 0;
         }
       }
 
-    }@else if ($direction == 'down'){
+    }@else if ($direction == "down"){
 
       @if ($hover == true and $active){
         &:hover:before,
         &.#{$active}:before{
           margin-top: $margin-top;
-          border-width:$thick 0 0 $thick;
+          border-width: $thick 0 0 $thick;
         }
       }@else if ($hover == true){
         &:hover:before{
           margin-top: $margin-top;
-          border-width:$thick 0 0 $thick;
+          border-width: $thick 0 0 $thick;
         }
       }@else if ($active){
         &.#{$active}:before{
           margin-top: $margin-top;
-          border-width:$thick 0 0 $thick;
+          border-width: $thick 0 0 $thick;
         }
       }
 
     }
 
-  }@else if ($direction == 'left' or $direction == 'right') {
-    $size: floor($height/$sqrt2 - 2*$thick);
-    $rate: 2*$width/$height;
+  }@else if ($direction == "left" or $direction == "right") {
+    $size: floor($height / $sqrt2 - 2 * $thick);
+    $rate: 2 * $width / $height;
     //$margin-left: round($rate*$size/(2*$sqrt2));
-    $margin-left:$rate*$size/(2*$sqrt2);
+    $margin-left: $rate * $size / (2 * $sqrt2);
 
     &:before{
       @if ($right) {
-        right:$right;
+        right: $right;
       }@else if($left){
-        left:$left;
+        left: $left;
       }@else{
-        left:50%;
+        left: 50%;
       }
       @include get-list($angle-default-css);
       width: $size;
@@ -151,52 +151,52 @@
           transform: translate(-50%, -50%) scale($rate, 1) rotate(45deg);
       }
 
-      @if ($direction == 'left') {
+      @if ($direction == "left") {
         margin-left: $margin-left;
-        border-width:0 0 $thick $thick;
-      } @else if ($direction == 'right') {
+        border-width: 0 0 $thick $thick;
+      } @else if ($direction == "right") {
         margin-left: - $margin-left;
-        border-width:$thick $thick 0 0;
+        border-width: $thick $thick 0 0;
       }
     }
 
-    @if ($direction == 'left') {
+    @if ($direction == "left") {
 
       @if ($hover == true and $active){
         &:hover:before,
         &.#{$active}:before{
           margin-left: - $margin-left;
-          border-width:$thick $thick 0 0;
+          border-width: $thick $thick 0 0;
         }
       }@else if ($hover == true){
         &:hover:before{
           margin-left: - $margin-left;
-          border-width:$thick $thick 0 0;
+          border-width: $thick $thick 0 0;
         }
       }@else if ($active){
         &.#{$active}:before{
           margin-left: - $margin-left;
-          border-width:$thick $thick 0 0;
+          border-width: $thick $thick 0 0;
         }
       }
 
-    }@else if ($direction == 'right'){
+    }@else if ($direction == "right"){
 
       @if ($hover == true and $active){
         &:hover:before,
         &.#{$active}:before{
           margin-left: $margin-left;
-          border-width:0 0 $thick $thick;
+          border-width: 0 0 $thick $thick;
         }
       }@else if ($hover == true){
         &:hover:before{
           margin-left: $margin-left;
-          border-width:0 0 $thick $thick;
+          border-width: 0 0 $thick $thick;
         }
       }@else if ($active){
         &.#{$active}:before{
           margin-left: $margin-left;
-          border-width:0 0 $thick $thick;
+          border-width: 0 0 $thick $thick;
         }
       }
 

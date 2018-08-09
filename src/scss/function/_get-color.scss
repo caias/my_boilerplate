@@ -5,35 +5,35 @@
 /// @param {$map value} $value [null] - color값
 /// @example scss - Scss
 ///   $palettes : (
-///      white:(
+///      white: (
 ///        1 : #fff
 ///      ),
-///      black:(
+///      black: (
 ///        1 : #000,
 ///        2 : #555
 ///      ),
-///      red:(
+///      red: (
 ///        1 : #ed1c24
 ///      ),
 ///    );
 ///		.foo {
-///			color:color(black,1);
+///			color: color(black,1);
 ///		}
 ///		.bar {
-///			color:color(red,1);
+///			color: color(red,1);
 ///		}
 ///		.baz {
-///			color:color(black,2);
+///			color: color(black,2);
 ///		}
 /// @example css - Compile css
 ///		.foo{
-///			 color:#000;
+///			 color: #000;
 ///		 }
 ///		.bar{
-///			 color:#ed1c24;
+///			 color: #ed1c24;
 ///		 }
 ///		.baz{
-///			 color:#555;
+///			 color: #555;
 ///		 }
 ///
 

@@ -35,31 +35,27 @@
 	$px : ();
 	$rem: ();
 
-	$root: $rem-baseSize;
+	$root: $rem-base-size;
 
 	@each $value in $values {
 		@if $value == 0 or $value == auto {
 			$px : append($px , $value);
 			$rem: append($rem, $value);
-		}
-
-		@else if type-of($value) == number {
+		} @else if type-of($value) == number {
 			$unit: unit($value);
-			$val: parseInt($value);
+			$val: strip-unit($value);
 
 			@if $unit == "px" {
-				$px : append($px,  $value);
+				$px : append($px, $value);
 				$rem: append($rem, ($val / $root + rem));
 			}
 
 			@if $unit == "rem" {
-				$px : append($px,  ($val * $root + px));
+				$px : append($px, ($val * $root + px));
 				$rem: append($rem, $value);
 			}
-		}
-
-		@else {
-			$px : append($px,  $value);
+		}	@else {
+			$px : append($px, $value);
 			$rem: append($rem, $value);
 		}
 	}

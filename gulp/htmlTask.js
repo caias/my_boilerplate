@@ -11,8 +11,8 @@ module.exports = (gulp, $, config) => {
         return gulp
         .src(config.html.src)
         .pipe($.plumber({errorHandler: $.notify.onError('Error: <%= error.message %>')}))
-        //.pipe($.htmlLint({ htmllintrc : '.htmllintrc.json' }))
-        //.pipe($.htmlLint.format())
+        .pipe($.htmlLint({ htmllintrc : config.lint.html }))
+        .pipe($.htmlLint.format())
         .pipe(browserSync.stream());
     });
 

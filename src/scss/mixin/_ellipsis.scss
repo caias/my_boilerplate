@@ -13,33 +13,33 @@
 ///		}
 /// @example css - Compile css
 ///   .foo {
-///		  width:100%;
+///		  width: 100%;
 ///		  overflow: hidden;
 ///		  white-space: nowrap;
 ///		  text-overflow: ellipsis;
 ///   }
 ///   .bar {
-///		  width:100%;
-///		  line-height:18px;
+///		  width: 100%;
+///		  line-height: 18px;
 ///		  max-height: 36px;
 ///		  overflow: hidden;
-///		  display:-webkit-box;
+///		  display: -webkit-box;
 ///		  -webkit-line-clamp: 2;
 ///		  text-overflow: ellipsis;
 ///		  -webkit-box-orient: vertical;
 ///   }
 ///
 
-@mixin ellipsis($lines:1, $line-height: false){
-	width:100%;
-	overflow:hidden;
-	text-overflow:ellipsis;
+@mixin ellipsis($lines: 1, $line-height: false){
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	@if ($lines > 1){
 		-webkit-box-orient: vertical;
     -webkit-line-clamp: $lines;
-		display:-webkit-box;
+		display: -webkit-box;
 		max-height: $line-height * $lines * 1px;
 	}@else{
-		white-space:nowrap;
+		white-space: nowrap;
 	}
 }

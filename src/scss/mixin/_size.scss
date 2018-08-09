@@ -13,16 +13,16 @@
 ///		}
 /// @example css - Compile css
 ///   .foo {
-///     width:20px;
-///     height:20px;
+///     width: 20px;
+///     height: 20px;
 ///   }
 ///   .bar {
-///     width:20px;
-///     height:18px;
+///     width: 20px;
+///     height: 18px;
 ///   }
 ///
 
-@mixin size($width, $height:$width) {
+@mixin size($width, $height: $width) {
   width: $width;
   height: $width;
 }

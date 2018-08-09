@@ -1,7 +1,7 @@
-footer{
+header{
   @include rem(font-size, 30px);
   @include vtext(200px);
-  background-color: red;
+  background-color: blue;
   color: color(white, 1);
   text-align: center;
 }

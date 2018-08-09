@@ -7,14 +7,14 @@
 ///			@extend %clearfix
 ///		}
 /// @example css - Compile css
-///   .foo::after {
-///     content:'';
-///     display:table;
-///     clear:both;
+///   .foo:after {
+///     content: "";
+///     display: table;
+///     clear: both;
 ///   }
 ///
 
 %inner {
-  width:$content-center-size;
-  margin:0 auto;
+  width: $content-center-size;
+  margin: 0 auto;
 }

@@ -3,7 +3,7 @@
 /// @group Mixin
 /// @param {Number} $size [2] - buiiet size
 /// @param {Color} $color [#999] - bullet backround color
-/// @param {Number} $lineHeight [20] - bullet이 들어가는 텍스트 행간
+/// @param {Number} $line-height [20] - bullet이 들어가는 텍스트 행간
 /// @param {Number} $pdl [10] - padding-left값
 /// @param {Number} $radius [50%] - border-radius5값
 /// @example scss - Scss
@@ -12,32 +12,32 @@
 ///		}
 /// @example css - Compile css
 ///		.foo{
-///			 position:relative;
-///			 padding-left:10px;
-///			 line-height:20px;
+///			 position: relative;
+///			 padding-left: 10px;
+///			 line-height: 20px;
 ///			 &:before{
-///				 content:'';
-///				 width:2px;
-///				 height:2px;
-///				 position:absolute;
-///				 left:0;
-///				 top:9px;
-///				 border-radius:50%;
-///				 background-color:#999;
+///				 content: "";
+///				 width: 2px;
+///				 height: 2px;
+///				 position: absolute;
+///				 left: 0;
+///				 top: 9px;
+///				 border-radius: 50%;
+///				 background-color: #999;
 ///			 }
 ///		 }
 ///
 
-@mixin bullet($size:2px,$color:color(black,2),$lineHeight:20px,$pdl:10px,$radius:50%){
-	position:relative;
-	padding-left:$pdl;
-	line-height:$lineHeight;
-	$top:round(($lineHeight - $size) / 2);
+@mixin bullet($size: 2px, $color: color(black, 2), $line-height: 20px, $pdl: 10px, $radius: 50%){
+	position: relative;
+	padding-left: $pdl;
+	line-height: $line-height;
+	$top: round(($line-height - $size) / 2);
 	&:before{
-		content:'';
 		@include size($size);
-		@include absolute($top:$top , $left:0);
+		@include absolute($top: $top , $left: 0);
 		@include radius($radius);
-		background-color:$color;
+		content: "";
+		background-color: $color;
 	}
 }

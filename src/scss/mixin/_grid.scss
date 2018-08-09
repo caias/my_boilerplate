@@ -10,30 +10,30 @@
 ///		}
 /// @example css - Compile css
 ///   .foo.grid02 {
-///     width:auto;
-///     margin-left:-10px;
-///     overflow:hidden;
+///     width: auto;
+///     margin-left: -10px;
+///     overflow: hidden;
 ///     > .grid{
-///       float:left;
-///       width:50%;
-///       padding-left:10px;
-///       box-sizing:border-box;
+///       float: left;
+///       width: 50%;
+///       padding-left: 10px;
+///       box-sizing: border-box;
 ///     }
 ///   }
 ///
 
-@mixin grid($grid-count:null , $grid-space:null){
+@mixin grid($grid-count: null , $grid-space: null){
   &.grid0#{$grid-count}{
     @extend %clearfix;
-    width:auto;
+    width: auto;
     @if($grid-space){
-      margin-left:- #{$grid-space};
+      margin-left: - #{$grid-space};
     }
     > .grid{
       float: left;
-      width:(100% / $grid-count);
-      padding-left:$grid-space;
-      box-sizing:border-box;
+      width: (100% / $grid-count);
+      padding-left: $grid-space;
+      box-sizing: border-box;
     }
   }
 }
