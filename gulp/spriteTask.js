@@ -69,8 +69,8 @@ module.exports = (gulp, $, config) => {
         return $.del('src/scss/vendors/sprite');
     });
 
-    gulp.task('spsass' , () => {
-        $.runSequence('cleansp' , 'sprite' , 'sprite-retina' , 'sass' )
+    gulp.task('sp' , () => {
+        $.runSequence('cleansp' , 'sprite' , 'sprite-retina' )
     });
 
     // gulp.task('retina-spsass' , () => {

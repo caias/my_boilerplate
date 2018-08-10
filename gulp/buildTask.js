@@ -12,8 +12,8 @@ module.exports = (gulp, $, config) => {
         .pipe(gulp.dest(config.scss.dest))
     });
 
-    gulp.task('build' , () => {
-        $.runSequence( 'clean' , 'html' , 'images' , 'spsass' , 'prefix' )
+    gulp.task('build' , ['prefix'] , () => {
+        $.runSequence( 'clean' , 'html' , 'images' , 'spsass' , 'js' )
     });
 
     gulp.task('local' , () => {

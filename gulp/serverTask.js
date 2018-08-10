@@ -24,8 +24,8 @@ module.exports = (gulp, $, config) => {
             scss   : gulp.watch(config.scss.src, ['sass']),
             html   : gulp.watch(config.html.src, ['html']),
             images : gulp.watch(config.image.src, ['images']),
-            sprite : gulp.watch(config.sprite.src, ['spsass']),
-            retina : gulp.watch(config.retina.src, ['spsass']),
+            sprite : gulp.watch(config.sprite.src, ['sp']),
+            retina : gulp.watch(config.retina.src, ['sp']),
 
         };
 

@@ -32,13 +32,12 @@ module.exports = (gulp, $, config) => {
         .src(config.scss.src)
         .pipe($.sassGlob())
         .pipe($.if(environment !== 'prod' , $.sourcemaps.init() ))
-        // .pipe($.if(environment !== 'prod' , $.plumber({errorHandler:false}) ))
-        .pipe($.plumber({errorHandler:true}))
+        .pipe($.plumber({errorHandler: environment == 'prod' ? false : true}))
         .pipe($.cached('scssLint'))
         .pipe($.scssLint({'config': config.lint.scss}))
-        //.pipe($.if(environment === 'prod' , $.scssLint.failReporter() ))
-        // .pipe($.sass({outputStyle: 'expanded'}).on('error', onError))
+        .pipe($.if(environment === 'prod' , $.scssLint.failReporter() ))
         .pipe($.sass(scssOptions).on('error', onError))
+        .pipe($.if(environment === 'prod' , $.autoprefixer(config.browsers) ))
         // .pipe($.rename( (file) => {
         //     if( file.dirname  === 'common' ){
         //     }

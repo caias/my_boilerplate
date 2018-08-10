@@ -11,6 +11,11 @@ const config = {
         dest    : 'dist/'
     },
 
+    js : {
+        src     : 'src/js/*.js',
+        dest    : 'dist/js'
+    },
+
     scss : {
         src     : 'src/scss/**/*.s+(a|c)ss',
         dest    : 'dist/css'

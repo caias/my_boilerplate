@@ -9,9 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.0.1] - 2018-08-10
 ### Added
 - hologram 과 scss_lint를 위한 Gemfile 및 Gemfile.lock 파일 추가
+- netlify 배포시 js까지 전부 dist로 배포하기 위해 jsTask생성
 
 ### Changed
 - netlify 테스트를 위한 html task 변경
+- prefix Task 삭제후 scss Task 의 환경변수로 병합함
 
 ## [1.0.0] - 2018-08-09
 ### Added
