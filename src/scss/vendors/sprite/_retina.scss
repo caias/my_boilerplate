@@ -1,4 +1,4 @@
-// SCSS variables are information about icon"s compiled state, stored under its original file name
+// SCSS variables are information about icon's compiled state, stored under its original file name
 //
 // .icon-home {
 //   width: $icon-home-width;
@@ -9,7 +9,7 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
-$fork-name: "fork";
+$fork-name: 'fork';
 $fork-x: 0px;
 $fork-y: 0px;
 $fork-offset-x: 0px;
@@ -18,9 +18,9 @@ $fork-width: 32px;
 $fork-height: 32px;
 $fork-total-width: 74px;
 $fork-total-height: 74px;
-$fork-image: "retina.png";
-$fork: (0px, 0px, 0px, 0px, 32px, 32px, 74px, 74px, "retina.png", "fork", );
-$github-name: "github";
+$fork-image: 'retina.png';
+$fork: (0px, 0px, 0px, 0px, 32px, 32px, 74px, 74px, 'retina.png', 'fork', );
+$github-name: 'github';
 $github-x: 42px;
 $github-y: 0px;
 $github-offset-x: -42px;
@@ -29,9 +29,9 @@ $github-width: 32px;
 $github-height: 32px;
 $github-total-width: 74px;
 $github-total-height: 74px;
-$github-image: "retina.png";
-$github: (42px, 0px, -42px, 0px, 32px, 32px, 74px, 74px, "retina.png", "github", );
-$twitter-name: "twitter";
+$github-image: 'retina.png';
+$github: (42px, 0px, -42px, 0px, 32px, 32px, 74px, 74px, 'retina.png', 'github', );
+$twitter-name: 'twitter';
 $twitter-x: 0px;
 $twitter-y: 42px;
 $twitter-offset-x: 0px;
@@ -40,9 +40,9 @@ $twitter-width: 32px;
 $twitter-height: 32px;
 $twitter-total-width: 74px;
 $twitter-total-height: 74px;
-$twitter-image: "retina.png";
-$twitter: (0px, 42px, 0px, -42px, 32px, 32px, 74px, 74px, "retina.png", "twitter", );
-$fork-2x-name: "fork@2x";
+$twitter-image: 'retina.png';
+$twitter: (0px, 42px, 0px, -42px, 32px, 32px, 74px, 74px, 'retina.png', 'twitter', );
+$fork-2x-name: 'fork@2x';
 $fork-2x-x: 0px;
 $fork-2x-y: 0px;
 $fork-2x-offset-x: 0px;
@@ -51,9 +51,9 @@ $fork-2x-width: 64px;
 $fork-2x-height: 64px;
 $fork-2x-total-width: 148px;
 $fork-2x-total-height: 148px;
-$fork-2x-image: "retina2x.png";
-$fork-2x: (0px, 0px, 0px, 0px, 64px, 64px, 148px, 148px, "retina2x.png", "fork@2x", );
-$github-2x-name: "github@2x";
+$fork-2x-image: 'retina2x.png';
+$fork-2x: (0px, 0px, 0px, 0px, 64px, 64px, 148px, 148px, 'retina2x.png', 'fork@2x', );
+$github-2x-name: 'github@2x';
 $github-2x-x: 84px;
 $github-2x-y: 0px;
 $github-2x-offset-x: -84px;
@@ -62,9 +62,9 @@ $github-2x-width: 64px;
 $github-2x-height: 64px;
 $github-2x-total-width: 148px;
 $github-2x-total-height: 148px;
-$github-2x-image: "retina2x.png";
-$github-2x: (84px, 0px, -84px, 0px, 64px, 64px, 148px, 148px, "retina2x.png", "github@2x", );
-$twitter-2x-name: "twitter@2x";
+$github-2x-image: 'retina2x.png';
+$github-2x: (84px, 0px, -84px, 0px, 64px, 64px, 148px, 148px, 'retina2x.png', 'github@2x', );
+$twitter-2x-name: 'twitter@2x';
 $twitter-2x-x: 0px;
 $twitter-2x-y: 84px;
 $twitter-2x-offset-x: 0px;
@@ -73,28 +73,28 @@ $twitter-2x-width: 64px;
 $twitter-2x-height: 64px;
 $twitter-2x-total-width: 148px;
 $twitter-2x-total-height: 148px;
-$twitter-2x-image: "retina2x.png";
-$twitter-2x: (0px, 84px, 0px, -84px, 64px, 64px, 148px, 148px, "retina2x.png", "twitter@2x", );
+$twitter-2x-image: 'retina2x.png';
+$twitter-2x: (0px, 84px, 0px, -84px, 64px, 64px, 148px, 148px, 'retina2x.png', 'twitter@2x', );
 $spritesheet-width: 74px;
 $spritesheet-height: 74px;
-$spritesheet-image: "retina.png";
+$spritesheet-image: 'retina.png';
 $spritesheet-sprites: ($fork, $github, $twitter, );
-$spritesheet: (74px, 74px, "retina.png", $spritesheet-sprites, );
+$spritesheet: (74px, 74px, 'retina.png', $spritesheet-sprites, );
 $retina-spritesheet-width: 148px;
 $retina-spritesheet-height: 148px;
-$retina-spritesheet-image: "retina2x.png";
+$retina-spritesheet-image: 'retina2x.png';
 $retina-spritesheet-sprites: ($fork-2x, $github-2x, $twitter-2x, );
-$retina-spritesheet: (148px, 148px, "retina2x.png", $retina-spritesheet-sprites, );
+$retina-spritesheet: (148px, 148px, 'retina2x.png', $retina-spritesheet-sprites, );
 
 // These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
 //
 // The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
-$fork-group-name: "fork";
-$fork-group: ("fork", $fork, $fork-2x, );
-$github-group-name: "github";
-$github-group: ("github", $github, $github-2x, );
-$twitter-group-name: "twitter";
-$twitter-group: ("twitter", $twitter, $twitter-2x, );
+$fork-group-name: 'fork';
+$fork-group: ('fork', $fork, $fork-2x, );
+$github-group-name: 'github';
+$github-group: ('github', $github, $github-2x, );
+$twitter-group-name: 'twitter';
+$twitter-group: ('twitter', $twitter, $twitter-2x, );
 $retina-groups: ($fork-group, $github-group, $twitter-group, );
 
 // The provided mixins are intended to be used with the array-like variables
@@ -107,12 +107,12 @@ $retina-groups: ($fork-group, $github-group, $twitter-group, );
 //   @include sprite($icon-email);
 // }
 //
-// Example usage in HTML: 
+// Example usage in HTML:
 //
-// `display: block` sprite: 
+// `display: block` sprite:
 // <div class="icon-home"></div>
 //
-// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class: 
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
 //
 // // CSS
 // .icon {
@@ -125,20 +125,20 @@ $retina-groups: ($fork-group, $github-group, $twitter-group, );
 // The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
 //   It should be used with a "retina group" variable.
 //
-// The media query is from CSS Tricks: https: //css-tricks.com/snippets/css/retina-display-media-query/
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
 //
-// $icon-home-group: ("icon-home", $icon-home, $icon-home-2x, );
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
 //
 // .icon-home {
 //   @include retina-sprite($icon-home-group);
 // }
 
 [class^="retina-"] {
-  display: inline-block;
-  background-image: url("#{$img-retina}");
+  display:inline-block;
+  background-image:url('#{$img-retina}');
 	@media (-webkit-min-device-pixel-ratio: 2),
          (min-resolution: 192dpi) {
-			background-image: url("#{$img-retina2x}");
+			background-image:url('#{$img-retina2x}');
 	}
 }
 

@@ -14,7 +14,7 @@ module.exports = (gulp, $, config) => {
              server: {
                 baseDir: "./",
                 port: '3000',
-                index:'work.html'
+                index:'/dist/index.html'
             }
         });
     });

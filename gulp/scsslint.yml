@@ -245,6 +245,10 @@ linters:
   SpaceAfterPropertyColon:
     enabled: true
     style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+    exclude: [
+      '../src/scss/vendors/sprite/_img_sprite.scss',
+      '../src/scss/vendors/sprite/_retina.scss'
+    ]
 
   # 속성이름과 콜론사이에 공백을 사용할지 설정
   SpaceAfterPropertyName:
@@ -282,6 +286,10 @@ linters:
   StringQuotes:
     enabled: true
     style: double_quotes # or single_quotes
+    exclude: [
+      '../src/scss/vendors/sprite/_img_sprite.scss',
+      '../src/scss/vendors/sprite/_retina.scss'
+    ]
 
   # 세미콜론 사용여부를 설정
   # @extend, @include, @import, 변수 등은 항상 세미콜론으로 끝나야한다.

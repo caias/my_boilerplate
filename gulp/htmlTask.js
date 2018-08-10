@@ -13,6 +13,7 @@ module.exports = (gulp, $, config) => {
         .pipe($.plumber({errorHandler: $.notify.onError('Error: <%= error.message %>')}))
         .pipe($.htmlLint({ htmllintrc : config.lint.html }))
         .pipe($.htmlLint.format())
+        .pipe(gulp.dest(config.html.dest))
         .pipe(browserSync.stream());
     });
 

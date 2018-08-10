@@ -4,8 +4,11 @@ const pkg = require('../package.json');
 const config = {
 
     html : {
-        src     : 'src/html/**/*.html',
-        dest    : 'dist/html'
+        src     : [
+                    'src/**/*.html',
+                    './index.html'
+                ],
+        dest    : 'dist/'
     },
 
     scss : {

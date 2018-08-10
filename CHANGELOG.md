@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.1] - 2018-08-10
+### Added
+- hologram 과 scss_lint를 위한 Gemfile 및 Gemfile.lock 파일 추가
+
+### Changed
+- netlify 테스트를 위한 html task 변경
+
 ## [1.0.0] - 2018-08-09
 ### Added
 - .editorconfig 파일 추가
