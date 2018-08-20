@@ -1,6 +1,6 @@
 const log         = require('fancy-log'),
-      colors      = require('ansi-colors');
-const browserSync = require('browser-sync').create();
+      colors      = require('ansi-colors'),
+      browserSync = require('browser-sync').create();
 const reload     = browserSync.reload;
 /**
  * @param gulp
@@ -9,7 +9,7 @@ const reload     = browserSync.reload;
  */
 module.exports = (gulp, $, config) => {
 
-    gulp.task('server:init',  () => {
+    function serverInit(){
         return browserSync.init({
              server: {
                 baseDir: "./",
@@ -17,30 +17,30 @@ module.exports = (gulp, $, config) => {
                 index:'/dist/index.html'
             }
         });
-    });
+    }
 
-    gulp.task('watch' , () => {
+    function watch(){
         let watcher = {
-            scss   : gulp.watch(config.scss.src, ['sass']),
-            html   : gulp.watch(config.html.src, ['html']),
-            images : gulp.watch(config.image.src, ['images']),
-            sprite : gulp.watch(config.sprite.src, ['sp']),
-            retina : gulp.watch(config.retina.src, ['sp']),
-
-        };
-
-        let notify = (event) => {
-            log('File', colors.yellow(event.path), 'was', colors.magenta(event.type));
+            scss   : gulp.watch(config.scss.src, gulp.task('sass')),
+            html   : gulp.watch(config.html.src, gulp.task('html')),
+            js     : gulp.watch(config.js.src, gulp.task('js')),
+            images : gulp.watch(config.image.src, gulp.task('images')),
+            sprite : gulp.watch(config.sprite.src, gulp.task('spsass')),
+            retina : gulp.watch(config.retina.src, gulp.task('spsass')),
         };
 
         for(let key in watcher) {
             watcher[key].on('change', reload);
-            watcher[key].on('change', notify);
+			watcher[key].on('add', path => log('File', colors.yellow(path) , 'has been' , colors.green('added')))
+			watcher[key].on('change', path => log('File', colors.yellow(path) , 'has been' , colors.green('changed')))
+			watcher[key].on('unlink', path => log('File', colors.yellow(path) , 'has been' , colors.green('removed')))
+			watcher[key].on('addDir', path => log('File', colors.yellow(path) , 'has been' , colors.green('added')))
+			watcher[key].on('unlinkDir', path => log('Directory' , colors.yellow(path) , 'has been' , colors.green('removed')))
+			watcher[key].on('error', error => log('Watcher error:' , colors.red({error})))
         }
-    });
+    }
 
-    gulp.task('server',function () {
-        $.runSequence('server:init','watch');
-    });
+	gulp.task(watch);
+    gulp.task('server', gulp.parallel(serverInit , watch));
 
 };

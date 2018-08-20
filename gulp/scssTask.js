@@ -1,9 +1,8 @@
 const log         = require('fancy-log'),
-      colors      = require('ansi-colors'),
-      minimist    = require('minimist'),
-      path        = require('path');
-const browserSync = require('browser-sync').create();
-const reload      = browserSync.reload;
+      colors      = require('ansi-colors');
+	  isProduction= require('./config/gulp.env'),
+      browserSync = require('browser-sync').create(),
+ 	  reload      = browserSync.reload;
 /**
  * @param gulp
  * @param $
@@ -11,45 +10,28 @@ const reload      = browserSync.reload;
  */
 module.exports = (gulp, $, config) => {
 
-    const args = minimist(process.argv.slice(2));
-    const environment = args.env;
-
-    const scssOptions = {
-      outputStyle: environment == 'prod' ? 'compressed' : 'expanded', // nested, expanded, compact, compressed
-      indentType: "space",
-      indentWidth: 2, // maximum:10
-      precision: 6,
-      linefeed:'lf' // cr , crlf, lf , lfcr
-    };
-
     const onError = (err) => {
         log(colors.red("ERROR"), err);
         //throw new Error(colors.green("info") + '::' + err);
     };
 
-    gulp.task('sass' , () => {
+    function sass() {
         return gulp
         .src(config.scss.src)
         .pipe($.sassGlob())
-        .pipe($.if(environment !== 'prod' , $.sourcemaps.init() ))
-        .pipe($.plumber({errorHandler: environment == 'prod' ? false : true}))
+        .pipe($.if(!isProduction, $.sourcemaps.init() ))
+        .pipe($.plumber({errorHandler: isProduction ? false : true}))
         .pipe($.cached('scssLint'))
         .pipe($.scssLint({'config': config.lint.scss}))
-        .pipe($.if(environment === 'prod' , $.scssLint.failReporter() ))
-        .pipe($.sass(scssOptions).on('error', onError))
-        .pipe($.if(environment === 'prod' , $.autoprefixer(config.browsers) ))
-        // .pipe($.rename( (file) => {
-        //     if( file.dirname  === 'common' ){
-        //     }
-        //     else{
-        //         const temp = path.dirname(file.dirname);
-        //         file.dirname = 'pages';
-        //     }
-        // }))
-        .pipe($.if(environment !== 'prod' , $.sourcemaps.write('./') ))
+        .pipe($.if(isProduction , $.scssLint.failReporter() ))
+        .pipe($.sass(config.scssOptions).on('error', onError))
+        .pipe($.autoprefixer(config.browsers) )
+        .pipe($.if(!isProduction , $.sourcemaps.write('./') ))
         .pipe(gulp.dest(config.scss.dest))
         .pipe(browserSync.stream());
+    }
+    sass.description = 'scss파일을 scss-lint설정값에 맞게 검사후 css로 컴파일 및 소스맵 , autoprefixer생성 후 컴파일된 파일을 dist로 복사'
 
-    });
+    gulp.task(sass);
 
 };

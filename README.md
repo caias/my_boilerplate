@@ -1,4 +1,4 @@
-# my_boilerplate
+# my_boilerplate with gulp4.0
 
 *__개인 프로젝트용 scaffolding by leekangwon__*
 
@@ -13,6 +13,7 @@
 - Web Style Guide 문서 생성 [http://trulia.github.io/hologram/]
 - 로컬서버 작업중 저장시 자동 새로고침(live reload)
 - htmllint 및 scsslint 사용
+- purifycss를 이용하여 불필요하거나 안쓰이는 css 제거
 
 ## install & settings
 
@@ -79,19 +80,19 @@ my-boilerplate/
 ## 명령어
 명령어들은 기본적으로 터미널창에 입력해서 사용합니다.
 
-- [gulp] : 현재 설정되 있는 task 명령어들을 보여주는 명령어
+- [gulp --tasks] : 현재 설정되 있는 task 명령어와 설명을 보여주는 명령어
 - [gulp doc] : sass파일의 가이드문서를 만들어주는 명령어
 - [gulp hologram] : WSG(web style guide)문서를 만들어주는 명령어
 - [gulp sass] : sass/scss -> css 컴파일해서 dist폴더에 복사합니다.
 - [gulp images] : 이미지 파일들을 압축하여 dist폴더로 복사합니다.
 - [gulp sprite] : 자동 이미지 스프라이트 작업을 위한 명령어.(basic sprite)
-- [gulp sprite-retina] : 자동 이미지 스프라이트 작업을 위한 명령어.(retina sprite)
+- [gulp retina] : 자동 이미지 스프라이트 작업을 위한 명령어.(retina sprite)
 - [gulp spsass] : 이미지 스프라이트(basic&retina)후에 sass/scss 컴파일까지 같이 실행되는 명령어
 - [gulp clean] : dist 폴더 삭제
 - [gulp watch] : 작업중에 변경되는 파일을 감지하여 바뀐파일의 정보를 알려주며 sass/scss파일 수정시 자동 컴파일
 - [gulp server] : brower-sync를 사용, 기본토프(port3000)을 통해 로컬서버를 실행하게됩니다.
  기본적으로 watch기능이 같이 사용되며, 파일 수정후 저장시 livereload도 같이 작동됩니다.
-- [yarn run build] : 빌드버전을 위한 명령어로 scss컴파일이 compressed로 되며, sourcemap제거 및 vendor-prefix가 붙어서 나오게 됩니다.
+- [yarn build] : 빌드버전을 위한 명령어로 scss컴파일이 compressed로 되며, sourcemap제거 와 해결하지 못한 에러가 있을시 exitCode=0으로 종료
 
 ---
 ##### config file

@@ -1,6 +1,4 @@
-const path = require('path');
-const pkg = require('../package.json');
-
+const isProduction= require('./gulp.env');
 const config = {
 
     html : {
@@ -19,6 +17,14 @@ const config = {
     scss : {
         src     : 'src/scss/**/*.s+(a|c)ss',
         dest    : 'dist/css'
+    },
+
+	scssOptions : {
+    	outputStyle	: isProduction ? 'compressed' : 'expanded', // nested, expanded, compact, compressed
+    	indentType	: 'space',
+    	indentWidth	: 2, // maximum:10
+    	precision	: 6,
+    	linefeed	:'lf' // cr , crlf, lf , lfcr
     },
 
     image: {
@@ -43,27 +49,27 @@ const config = {
     },
 
     lint:{
-        scss : 'gulp/scsslint.yml',
-        html : 'gulp/.htmllintrc.json'
-    },
-    sassdoc:{
-        src : '.sassdocrc'
+        scss : './gulp/config/scsslint.yml',
+        html : './gulp/config/.htmllintrc.json'
     },
 
     browsers : [
-        "last 2 versions",
-        "Android 2.3",
-        "Android >= 4",
-        "Chrome >= 20",
-        "Firefox >= 15",
-        "Explorer >= 8",
-        "iOS >= 6",
-        "Opera >= 12",
-        "Safari >= 6"
+        'last 3 versions',
+        'Android 2.3',
+        'Android >= 4',
+        'Chrome >= 20',
+        'Firefox >= 15',
+        'Explorer >= 8',
+        'iOS >= 6',
+        'Opera >= 12',
+        'Safari >= 6'
     ],
 
-    version     : pkg.version,
-    env         : process.env.NODE_ENV || 'dev'
+	purifyOpt : {
+		info:true,
+		minify:true,
+		rejected:true
+	}
 };
 
 module.exports = config;

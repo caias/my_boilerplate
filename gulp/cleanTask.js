@@ -1,3 +1,4 @@
+const del = require('del');
 /**
  * @param gulp
  * @param $
@@ -5,8 +6,11 @@
  */
 module.exports = (gulp, $, config) => {
 
-    gulp.task('clean', () => {
-        return $.del.sync('dist');
-    });
+    function clean(){
+        return del('dist')
+    }
+    clean.description = 'Dist 폴더를 삭제합니다.'
+
+    gulp.task(clean);
 
 };

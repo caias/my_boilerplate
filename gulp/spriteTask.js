@@ -1,3 +1,7 @@
+const merge         = require('merge-stream'),
+        del         = require('del'),
+      vinyl         = require('vinyl-buffer');
+
 /**
  * @param gulp
  * @param $
@@ -5,7 +9,7 @@
  */
 module.exports = (gulp, $, config) => {
 
-    gulp.task('sprite', () => {
+    function sprite() {
     	const opts = {
     		spritesmith: (options, sprite, icons) => {
     			//options.imgPath = `/dist/images/sprite/${options.imgName}`;
@@ -27,7 +31,7 @@ module.exports = (gulp, $, config) => {
                 });
 
         const imgStream = spriteData.img
-            .pipe($.vinylBuffer())
+            .pipe(vinyl())
             .pipe($.cache($.imagemin({
                 interlaced: true,
                 progressive: true,
@@ -38,44 +42,45 @@ module.exports = (gulp, $, config) => {
     	const cssStream = spriteData.css
             .pipe(gulp.dest('src/scss/vendors/sprite/'));
 
-    	return $.mergeStream(imgStream, cssStream);
-    });
+    	return merge(imgStream, cssStream);
+    }
+    sprite.description = '일반적인 자동 image sprite 생성을 위한 Task입니다.'
 
-    gulp.task('sprite-retina', function () {
-      const data = gulp.src('src/images/sprite/retina/*.png').pipe($.spritesmith({
-        retinaSrcFilter: 'src/images/sprite/retina/*@2x.png',
-        imgName: 'retina.png',
-        retinaImgName: 'retina2x.png',
-        cssName: '_retina.scss',
-        cssTemplate: `./sprite_templates/myretina.scss.handlebars`,
-        padding: 10,
-      }));
-      const imgStream = data.img
-          .pipe($.vinylBuffer())
-          .pipe($.cache($.imagemin({
-              interlaced: true,
-              progressive: true,
-              optimizationLevel: 7
-              })))
-          .pipe(gulp.dest(config.sprite.dest));
+    function retina() {
+        const data = gulp.src('src/images/sprite/retina/*.png').pipe($.spritesmith({
+            retinaSrcFilter: 'src/images/sprite/retina/*@2x.png',
+            imgName: 'retina.png',
+            retinaImgName: 'retina2x.png',
+            cssName: '_retina.scss',
+            cssTemplate: `./sprite_templates/myretina.scss.handlebars`,
+            padding: 10,
+        }));
+        const imgStream = data.img
+            .pipe(vinyl())
+            .pipe($.cache($.imagemin({
+                interlaced: true,
+                progressive: true,
+                optimizationLevel: 7
+            })))
+            .pipe(gulp.dest(config.sprite.dest));
 
-      const cssStream = data.css
-        .pipe(gulp.dest('src/scss/vendors/sprite/'));
+        const cssStream = data.css
+            .pipe(gulp.dest('src/scss/vendors/sprite/'));
 
-      return $.mergeStream(imgStream, cssStream);
-    });
+        return merge(imgStream, cssStream);
+    }
+    retina.description = 'retina 전용 자동 image sprite를 만드는 Task입니다.'
 
-    gulp.task('cleansp', () => {
-        return $.del('src/scss/vendors/sprite');
-    });
+    function cleansp(){
+        return del('src/scss/vendors/sprite')
+    }
+    cleansp.description = 'image sprite 관련 scss파일을 삭제합니다.'
 
-    gulp.task('sp' , () => {
-        $.runSequence('cleansp' , 'sprite' , 'sprite-retina' )
-    });
+    gulp.task(sprite);
+    gulp.task(retina);
+    gulp.task(cleansp);
 
-    // gulp.task('retina-spsass' , () => {
-    //     $.runSequence('cleansp' , 'spsass' , 'sprite-retina' , 'sass' )
-    // });
+    gulp.task('spsass', gulp.series('cleansp' , gulp.parallel('sprite', 'retina'), 'sass'));
 
 
 };

@@ -7,11 +7,14 @@ const reload     = browserSync.reload;
  */
 module.exports = (gulp, $, config) => {
 
-    gulp.task('js', () => {
+    function js() {
         return gulp
         .src(config.js.src)
         .pipe(gulp.dest(config.js.dest))
         .pipe(browserSync.stream());
-    });
+    }
+    js.description = 'JS파일을 Dist 폴더로 복사합니다.'
+
+    gulp.task(js)
 
 };

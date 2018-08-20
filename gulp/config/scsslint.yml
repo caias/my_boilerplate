@@ -228,7 +228,7 @@ linters:
   #선택자를 쉽표 뒤에 별도의 행으로 분할하고 각 선택자가 하나의 행을 차지하게 합니다.
   SingleLinePerSelector:
     enabled: true
-    exclude: ['../src/scss/base/_reset.scss']
+    exclude: ['../../src/scss/base/_reset.scss']
 
   # 목록에 쉼표 뒤에 공백이 올지 안올지에 대한 룰입니다.
   SpaceAfterComma:
@@ -246,8 +246,8 @@ linters:
     enabled: true
     style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
     exclude: [
-      '../src/scss/vendors/sprite/_img_sprite.scss',
-      '../src/scss/vendors/sprite/_retina.scss'
+      '../../src/scss/vendors/sprite/_img_sprite.scss',
+      '../../src/scss/vendors/sprite/_retina.scss'
     ]
 
   # 속성이름과 콜론사이에 공백을 사용할지 설정
@@ -287,8 +287,8 @@ linters:
     enabled: true
     style: double_quotes # or single_quotes
     exclude: [
-      '../src/scss/vendors/sprite/_img_sprite.scss',
-      '../src/scss/vendors/sprite/_retina.scss'
+      '../../src/scss/vendors/sprite/_img_sprite.scss',
+      '../../src/scss/vendors/sprite/_retina.scss'
     ]
 
   # 세미콜론 사용여부를 설정
@@ -340,8 +340,8 @@ linters:
   ZeroUnit:
     enabled: true
     exclude: [
-      '../src/scss/vendors/sprite/_img_sprite.scss',
-      '../src/scss/vendors/sprite/_retina.scss'
+      '../../src/scss/vendors/sprite/_img_sprite.scss',
+      '../../src/scss/vendors/sprite/_retina.scss'
     ]
 
   # 사용안함 Compass Linters 를 사용할지 설정 - 사용안함

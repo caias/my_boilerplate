@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.0] - 2018-08-20
+### Added
+- purify gulp task 추가.
+
+### Changed
+- gulp3.x 버전에서 gulp4.0 정식버전으로 업그레이드에 맞춰서 파일 변경
+- 기존에 run-sequence를 써도 병렬도 Task가 수행되면서 발행하는 에러들을 gulp4.0으로 업그레이드 하면서 series와 parallel로 수정.
+
 ## [1.0.1] - 2018-08-10
 ### Added
 - hologram 과 scss_lint를 위한 Gemfile 및 Gemfile.lock 파일 추가

@@ -1,3 +1,5 @@
+const del           = require('del');
+
 /**
  * @param gulp
  * @param $
@@ -5,13 +7,21 @@
  */
 module.exports = (gulp, $, config) => {
 
-    gulp.task('clean-hologram', () => {
-        return $.del.sync('wsg');
-    });
+    function cleanwsg(){
+        return del('wsg')
+    }
+    cleanwsg.description = 'hologram으로 생성한 web style guide문서 삭제'
 
-    gulp.task('hologram', ['clean-hologram'] , () => {
+    function hologram(cb){
         gulp.src('hologram_config.yml')
         .pipe($.hologram());
-    });
+        cb();
+    }
+    hologram.description = 'hologram을 이용해 web style guide 문서를 생성합니다.'
+
+    gulp.task(cleanwsg);
+    gulp.task(hologram);
+
+    gulp.task('wsg', gulp.series('cleanwsg' , 'hologram'))
 
 };
