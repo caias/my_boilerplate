@@ -1,3 +1,5 @@
+const log         = require('fancy-log'),
+      colors      = require('ansi-colors');
 /**
  * @param gulp
  * @param $
