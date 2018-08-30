@@ -13,8 +13,8 @@ module.exports = (gulp, $, config) => {
     const onError = (err) => {
 		if (err) {
             let exitCode = 1;
-            console.log('[ERROR] gulp build task failed', err);
-            console.log('[FAIL] gulp build task failed - exiting with code ' + exitCode);
+            console.log(colors.red('[ERROR]'), 'gulp build task failed', err);
+            console.log(colors.red('[FAIL]'), 'gulp build task failed - exiting with code ' + exitCode);
             return process.exit(exitCode);
         }
         //throw new Error(colors.green("info") + '::' + err);
