@@ -1,6 +1,6 @@
 {
   "name": "scaffolding",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "ui-devloper resource",
   "main": "gulpfile.babel.js",
   "scripts": {
