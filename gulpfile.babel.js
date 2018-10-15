@@ -20,6 +20,7 @@ require('./gulp/htmlTask.js')(gulp, $, gulpConfig);
 require('./gulp/jsTask.js')(gulp, $, gulpConfig);
 require('./gulp/imgTask.js')(gulp, $, gulpConfig);
 require('./gulp/scssTask.js')(gulp, $, gulpConfig);
+require('./gulp/svgTask.js')(gulp, $, gulpConfig);
 require('./gulp/spriteTask.js')(gulp, $, gulpConfig);
 require('./gulp/serverTask.js')(gulp, $, gulpConfig);
 require('./gulp/docTask.js')(gulp, $, gulpConfig);

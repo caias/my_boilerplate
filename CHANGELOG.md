@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.2] - 2018-10-15
+### Added
+- scss component 들의 상속 유형별 정리를 위한 inherit mixin 추가
+- SVG sprite Task 추가
+
 ## [1.1.1] - 2018-08-30
 ### Added
 - gulp deploy build시에 error or fail이 있으면 배포 중지 코드 추가

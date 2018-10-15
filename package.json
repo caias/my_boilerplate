@@ -13,7 +13,7 @@
   "author": "lee kang won",
   "contributors": "caias <caias1018@gmail.com>",
   "license": "ISC",
-	"devDependencies": {
+  "devDependencies": {
     "babel-preset-es2015": "6.24.1",
     "babel-register": "6.26.0",
     "browser-sync": "2.24.6",
@@ -35,6 +35,8 @@
     "gulp-sass-glob": "1.0.9",
     "gulp-scss-lint": "0.7.0",
     "gulp-sourcemaps": "2.6.4",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.1.0",
     "gulp.spritesmith": "6.9.0",
     "gulp.spritesmith-multi": "3.1.0",
     "hologram-github-theme": "0.1.4",

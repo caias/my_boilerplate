@@ -8,6 +8,28 @@
 @import "components/__components";
 @import "layout/__layout";
 
+// 버튼 컴포넨트 상속 케이스별 정리를 위한 믹스인 exam
+// $button-space-case: (
+//   mypage : (
+//     margin-top:10px,
+//     padding-bottom:0
+//   ),
+//   deal : (
+//     margin-top:20px,
+//     padding-right:10px
+//   ),
+//   item : (
+//     margin-top:30px
+//   )
+// );
+//
+// .wbtn{
+//   @each $property , $value in $button-space-case{
+//     @include inherit($property){
+//       @include get-list($button-space-case , $property);
+//     }
+//   }
+// }
 
 .triangle{
   height: 20px;
@@ -96,16 +118,6 @@
   }
 }
 
-.retina-fork{
-  @include retina-sprite($fork-group);
-}
-.retina-github{
-  @include retina-sprite($github-group);
-}
-.retina-twitter{
-  @include retina-sprite($twitter-group);
-}
-
-.spr-aksd{
-  @include sprite($btn-go-related);
-}
+// .spr-aksd{
+//   @include sprite($btn-go-related);
+// }

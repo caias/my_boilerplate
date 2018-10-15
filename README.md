@@ -189,12 +189,6 @@ my-boilerplate/
 ---
 ### error log
 
-    package.json: Name contains illegal characters
-
--> 어느 버전부터 인지는 정확하게 모르겠지만 package.json의 name뿐만 아니라 description / Author 등에 더이상 대문자와 스페이스가 허용이 안된다.
-대문자를 전부 소문자로 바꾸니 에러가 더이상 발생하지 않음.
-[https://yarnpkg.com/en/docs/cli/add]
-
     (node:9269) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: EACCES: permission denied
 
 -> watch Task 나 server Task중 이미지 파일(생성/변환/복사)등이 이루어질때 에러남.
