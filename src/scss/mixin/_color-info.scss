@@ -1,0 +1,26 @@
+/// color palettes map 리스팅을 body:before를 통해 보여주는 function
+/// @access public
+/// @group Mixin
+/// @param {map} $map [$palettes] - map variable name
+/// @example scss - Scss
+///		.foo {
+///			@include colorinfo();
+///		}
+/// @example css - Compile css
+///		.foo{
+///			 content:""  white: (   1: #fff,   ),   blue: (   1: #305ec8,   2: #4776e1,   3: #1883d7,   4: #1c4790,   5: #f3f9ff,   6: ///#93a5dd,   7: #d8def2,   ),   black: (   1: #555,   2: #999,   3: #cdcdcd,   4: #e5e5ea,   5: #f5f5f6,   6: #111,   7: #63646a,   8: /// #abacac,   9: #d8d7d6,   10: #abacac,   11: #303030,   12: #d8d7d6,   ),   red: (   1: #ed1c24,   2: #aa070d,   ), ""
+///		 }
+///
+
+@mixin colorinfo($map:$palettes) {
+  body:before {
+    content: print-map($map);
+    display: block;
+    padding: 5px;
+    background: color(black, 10);
+    border: 1px solid color(black, 3);
+    color: color(black, 11);
+    font-size: 17px;
+    white-space: pre-wrap;
+  }
+}

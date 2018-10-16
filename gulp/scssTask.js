@@ -26,7 +26,6 @@ module.exports = (gulp, $, config) => {
         .pipe($.sassGlob())
         .pipe($.if(!isProduction, $.sourcemaps.init() ))
         .pipe($.plumber({errorHandler: isProduction ? false : true}))
-        .pipe($.cached('scssLint'))
         .pipe($.scssLint({'config': config.lint.scss}))
         .pipe($.if(isProduction , $.scssLint.failReporter() ))
         .pipe($.sass(config.scssOptions).on('error', onError))
