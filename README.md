@@ -186,6 +186,11 @@ my-boilerplate/
 
  2. htmllint / scsslint 등의 파일은 개인취향에 맞게 설정하셔서 쓰시면 됩니다.
 
+ 3. svg-sprite 관련
+ - 위치 : src/images/svg/{folder name}/*.svg
+ - 가이드파일 : svg-guide/{folder name}.html 로 생성
+ - sprite파일 : /dist/svg/{folder name}.svg 로 생성
+
 ---
 ### error log
 
@@ -200,3 +205,8 @@ my-boilerplate/
 사용자들의 피드백을 받아 gulp-util을 없애고 세분화 시켜서 npm pacakge로 다시 올려놓은듯 하다. 바꾸는데 시간이 좀 걸릴듯 하다.
 (아직까지 사용은 되지만. 위와같은 메시지 출력)
 [https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5]
+
+    file to import not found or unreadable: somefilename
+
+-> scss 컴파일전에 gulp를 통해 verdor성격의 partial 파일이 만들어지는 과정 후에 약간의 딜레이차로 partial파일을 compile시에 못 읽는 경우가 생겼다. 검색해보니 gulp-wait 라는 모듈을 통해 약간의 딜레이를 주게되면 partial파일을 다시 읽을수 있게 해결되었다.
+[https://garystanton.co.uk/gulp-sass-file-to-import-not-found-or-unreadable/]
