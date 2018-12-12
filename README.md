@@ -174,7 +174,7 @@ my-boilerplate/
 ---
 ### 기타 Notice
 
- 1. auto image sprite 의 템플릿을 수정하고 싶을 경우 sprite_templates폴더에 있는 hbs(handlebars)를 취향에 따라 수정해서 쓰시면 됩니다.
+ 1. auto image sprite 의 템플릿을 수정하고 싶을 경우 helper폴더에 있는 hbs(handlebars)를 취향에 따라 수정해서 쓰시면 됩니다.
     basic image sprite = __mysprite.scss.handlebars__
     retina image sprite = __myretina.scss.handlebars__
     basic image sprite folder = __/src/images/sprtie/img_sprite/**/*__

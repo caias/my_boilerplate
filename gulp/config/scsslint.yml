@@ -6,9 +6,7 @@ plugin_gems: []
 # severity = warning과 error를 구분짓는 구분자
 severity: warning
 exclude: [
-	'../../src/scss/vendors/sprite/_img_sprite.scss',
-	'../../src/scss/vendors/sprite/_retina.scss',
-	'../../src/scss/vendors/_sprites-svg.scss',
+	'../../src/scss/vendors/**/*.scss',
 	'../../src/scss/base/_reset.scss'
 ]
 linters:

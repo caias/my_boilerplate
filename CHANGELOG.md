@@ -1,5 +1,5 @@
 # Changelog
-개인 프로젝트 scaffolding 파일들의 변경 로그
+개인 프로젝트 scaffolding 파일들의 변경 로그 및 간단 이력
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ## [1.1.5] - 2018-12-12
+### Added
+- svg sprite 폴더별 multiple이 되도록 추가 및 svg-guide생성
+- svg guide 관련 clean Task 추가
+
+### Changed
+- scss function  @warning 과 @error test 변경
+- scss Task중 gulp-wait 추가(unreadable error 관련)
+
+## [1.1.5] - 2018-12-11
 ### Added
 - svg 관련 git ignore 목록 추가 및 svg-guide 템플릿 추가
 

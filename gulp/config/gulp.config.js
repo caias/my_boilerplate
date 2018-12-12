@@ -30,7 +30,8 @@ const config = {
 	image: {
 		src	 : [
 			'src/images/**/*.+(png|jpg|gif|svg)',
-			'!src/images/sprite/**/*.png'
+			'!src/images/sprite/**/*.png',
+			'!src/images/svg/**/*.svg'
   				],
 		dest	: 'dist/images'
 	},
@@ -46,7 +47,7 @@ const config = {
 	svg : {
 		src		: 'src/images/svg/*.svg',
 		clean	: [
-					'dist/svg/svg-sprite.svg',
+					'dist/svg/*.svg',
 					'src/scss/vendors'
 				]
 	},
@@ -63,7 +64,6 @@ const config = {
 
 	browsers : [
 		'last 3 versions',
-		'Android 2.3',
 		'Android >= 4',
 		'Chrome >= 20',
 		'Firefox >= 15',
@@ -72,35 +72,6 @@ const config = {
 		'Opera >= 12',
 		'Safari >= 6'
 	],
-
-	svgOpt : {
-		shape :
-	   {
-		   spacing :
-		   {
-
-		   }
-	   },
-	   mode :
-	   {
-		   css :
-		   {
-			   dimensions : false,
-			   bust : false,
-			   dest : '.',
-			   sprite : './dist/svg/svg-sprite.svg',
-			   prefix : '%s',
-			   render :
-			   {
-				   scss    :
-				   {
-				   		template : './sprite_templates/svgsprite-scss-tmpl.mustache',
-					   	dest : './src/scss/vendors/_sprites-svg.scss'
-				   }
-			   }
-		   }
-		}
-	},
 
 	purifyOpt : {
 		info:true,

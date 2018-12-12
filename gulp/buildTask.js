@@ -1,5 +1,5 @@
-const log         = require('fancy-log'),
-      colors      = require('ansi-colors');
+const log = require('fancy-log'),
+			colors = require('ansi-colors');
 /**
  * @param gulp
  * @param $
@@ -7,6 +7,10 @@ const log         = require('fancy-log'),
  */
 module.exports = (gulp, $, config) => {
 
-    gulp.task('build', gulp.series('clean' , gulp.parallel('js', 'html' ,'images'), 'spsass' , 'purify' ));
+	// image sprite or retina sprite 사용하는 경우
+	// gulp.task('build', gulp.series('clean', gulp.parallel('js', 'html', 'images'), 'spsass', 'purify'));
+
+	// svg sprite 사용하는 경우
+	gulp.task('build', gulp.series('clean', gulp.parallel('js', 'html', 'images'), 'svg-sprite', 'purify'));
 
 };

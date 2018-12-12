@@ -1,7 +1,7 @@
 @import url("https: //fonts.googleapis.com/css?family=Nanum+Gothic: 400,700&subset=korean");
 @import "function/__function";
 @import "variables";
-@import "vendors/sprite/*.scss";
+@import "vendors/**/*.scss";
 @import "mixin/__mixin";
 @import "placeholder/__placeholder";
 @import "base/__base";
@@ -64,7 +64,7 @@
 }
 
 .a{
-  @include z-index(dim);
+  z-index: z-index(dim);
 }
 
 
@@ -123,3 +123,30 @@
 // }
 
 // @include colorinfo();
+%test01{
+	background: url("/dist/svg/test01.svg");
+}
+
+%test02{
+	background: url("/dist/svg/test02.svg");
+}
+
+.svg01{
+	@extend %test01;
+	@include svgsprite($ic_cart_b);
+}
+
+.svg02{
+	@extend %test01;
+	@include svgsprite($ic_cart_g);
+}
+
+.svg03{
+	@extend %test02;
+	@include svgsprite($ccc);
+}
+
+.svg04{
+	@extend %test02;
+	@include svgsprite($ddd);
+}
