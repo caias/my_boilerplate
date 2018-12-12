@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.5] - 2018-12-12
+### Added
+- svg 관련 git ignore 목록 추가 및 svg-guide 템플릿 추가
+
 ## [1.1.4] - 2018-10-16
 ### Added
 - scss map variable을 body:before의 content를 통해 간편하게 확인할수 있는 map view function / Mixin 추가

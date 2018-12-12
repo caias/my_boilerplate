@@ -26,3 +26,7 @@ doc_assets/
 
 # scssdoc 생성시 쓰이는 파일들
 docs/
+
+# SVG GUIDE 파일 및 Vendor관련 scss 제외
+svg-guide/
+src/scss/vendors/

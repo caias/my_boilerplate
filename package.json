@@ -1,6 +1,6 @@
 {
   "name": "scaffolding",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "ui-devloper resource",
   "main": "gulpfile.babel.js",
   "scripts": {
@@ -37,6 +37,7 @@
     "gulp-sourcemaps": "2.6.4",
     "gulp-svg-sprite": "1.5.0",
     "gulp-svgmin": "2.1.0",
+    "gulp-wait": "0.0.2",
     "gulp.spritesmith": "6.9.0",
     "gulp.spritesmith-multi": "3.1.0",
     "hologram-github-theme": "0.1.4",
