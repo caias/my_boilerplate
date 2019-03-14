@@ -10,4 +10,15 @@ $(document).ready(function() {
     	$(this).find('footer').unwrap('footer');
     });
 
+		$(".datepicker").datepicker({
+			changeMonth: true,
+			changeYear: true,
+			showButtonPanel: false,
+			showOn: "button",
+			buttonImage: "/dist/images/common/ic-calendar.png",
+			buttonImageOnly: true,
+			showOtherMonths: true,
+			selectOtherMonths: true
+		});
+
 });

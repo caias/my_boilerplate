@@ -57,18 +57,14 @@
 ///		 }
 ///
 
-@mixin withbtn($pdr: null, $height: null, $right: 0, $top: 0){
-  @include relative();
-  padding-right: $pdr;
-  box-sizing: border-box;
-  > input{
-    width: 100%;
-    @if $height {
-      @include vtext($height...);
-    }
-  }
-  button,
-  a{
-    @include posrt($right, $top);
-  }
+@mixin with-righside($padding-right: null, $selector: "button", $width: 100%, $right:0, $top:0){
+	@include relative();
+	width: $width;
+	padding-right: $padding-right;
+	> input{
+		width: 100%;
+	}
+	#{$selector}{
+		@include posrt($right, $top);
+	}
 }

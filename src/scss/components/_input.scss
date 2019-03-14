@@ -1,7 +1,7 @@
 input[type=text],
 input[type=password]{
   @include radius(0);
-  @include vtext(40px);
+  @include vtext(34px, 32);
   border: 1px solid color(black, 3);
   box-sizing: border-box;
   vertical-align: middle;
@@ -21,7 +21,7 @@ select{
   background-color: color(white, 1);
 }
 
-input[type=text]::-ms-clear {
+input[type=text]:-ms-clear {
   display: none !important;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -30,7 +30,7 @@ input[type=text]::-ms-clear {
 ::-moz-placeholder { /* Firefox 19+ */
   color: color(black, 2) !important;
 }
-::-ms-input-placeholder { /* IE 10+ */
+:-ms-input-placeholder { /* IE 10+ */
   color: color(black, 2) !important;
 }
 

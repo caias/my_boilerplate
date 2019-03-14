@@ -3,7 +3,6 @@
 @import "str-replace";
 @import "z-index";
 @import "rem";
-@import "map-info";
 
 // rem변환시 하위 브라우져 및 하위 OS를 위해 px값을 같이 compile할지에 대한 여부
 $with-px: false;

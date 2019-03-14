@@ -1,15 +1,17 @@
+$calendar-wrap-width: 400px;
+$date-picker-image-width: 34px;
+
+
 .ui-datepicker-next,
 .ui-datepicker-prev{
 	display: none;
 }
 
 .ui-datepicker{
-	@include bd(color(blue, 1));
 	display: none;
 	width: 235px;
 	box-sizing: border-box;
 	padding: 10px;
-	background-color: color(white, 1);
 }
 
 .ui-datepicker-title{
@@ -39,16 +41,28 @@
 		font-size: 12px;
 		padding: 2px 0;
 		&.ui-datepicker-week-end {
-			color: color(black, 2);
+			color: color(red, 1);
 		}
 		&.ui-datepicker-today{
 			a{
 				@include vtext(24px);
-				@include radius(12px);
 				width: 24px;
-				background-color: color(blue, 1);
-				color: color(white, 1);
 			}
+		}
+	}
+}
+
+.calendar-wrap{
+	display: inline-block;
+	vertical-align: middle;
+	@include with-righside($date-picker-image-width, 'img', $calendar-wrap-width);
+	+ .calendar-wrap{
+		margin-left: 20px;
+		&:before{
+			content: "";
+			@include size(4px, 1px);
+			@include poslt(-12px, 17px);
+			background-color: color(black, 1);
 		}
 	}
 }

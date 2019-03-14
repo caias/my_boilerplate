@@ -51,8 +51,7 @@
 
     $size: floor($width / $sqrt2 - 2 * $thick);
     $rate: 2 * $height / $width;
-    //$margin-top: round($rate*$size/(2*$sqrt2));
-    $margin-top: $rate * $size / (2 * $sqrt2);
+    $margin-top: round($rate * $size / (2 * $sqrt2));
 
     &:before{
       @include get-list($angle-default-css);
@@ -129,8 +128,7 @@
   }@else if ($direction == "left" or $direction == "right") {
     $size: floor($height / $sqrt2 - 2 * $thick);
     $rate: 2 * $width / $height;
-    //$margin-left: round($rate*$size/(2*$sqrt2));
-    $margin-left: $rate * $size / (2 * $sqrt2);
+    $margin-left: round($rate * $size / (2 * $sqrt2));
 
     &:before{
       @if ($right) {
