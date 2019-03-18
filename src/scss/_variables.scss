@@ -33,9 +33,12 @@ $palettes: (
 
 //reset 폰트 관련
 $font-color-base: color(black, 1) !default;
-$font-size-base: rem(16px) !default;
+$font-size-base: 14px !default;
 $font-family-base: "Nanum Gothic", "돋움", Dotum, sans-serif !default;
 $content-center-size: 1158px !default;
+
+//default color
+$white: color(white, 1);
 
 // 이미지 경로 관련 variable
 // $img-url : "../../dist/images/sprite";
@@ -45,16 +48,33 @@ $img-retina : "#{$img-url}/sprite/retina.png";
 $img-retina2x : "#{$img-url}/sprite/retina2x.png";
 
 //border basic style - border mixin 관련
-$bd-basic-color: color(black, 2) !default;
+$bd-basic-color: null;
 $bd-basic-style: solid !default;
 $bd-basic-width: 1px !default;
+
+// input feature
+$input-font-family: $font-family-base;
+$input-font-color: null;
+$input-height: 40px;
+$input-border-color: null;
+$input-background-color: $white;
+$input-placeholder-font-color: null;
+$input-disable-background-color: null;
+$input-disable-border-color: null;
+$input-disable-font-color: null;
 
 // route2
 $sqrt2 : 1.41421356237;
 
 // z-index 매핑
 $z-indexes: (
-  modal       : 200,
-  dim         : 150,
-  navigation  : 100
+	auto	  		: auto,
+	zero				: 0,
+	one					: 1,
+	low					: 5,
+	mid					: 10,
+	high				: 15,
+	header			: 30,
+	dim         : 150,
+	modal       : 200
 );

@@ -1,0 +1,32 @@
+/// colorpicker
+/// @access public
+/// @group Function
+/// @param {$number} $number [null] - 숫자
+/// @param {$number} $count [2] - 나눌 값
+/// @param {$string} $mode [round] - round / ceil / floor
+/// @example scss - Scss
+///		.foo {
+///			width: - devide(55px);
+///			height: - devide(55px, floor);
+///			top: devide(100px, $count: 4);
+///		}
+/// @example css - Compile css
+///		.foo{
+///			 width: -28px;
+///			 height: -27px;
+///			 top: 25px;
+///		 }
+///
+
+@function devide($number , $mode: round, $count: 2) {
+	@if $mode == round {
+		@return round($number / $count);
+	} @else if $mode == ceil {
+		@return ceil($number / $count);
+	} @else if $mode == floor {
+		@return floor($number / $count);
+	} @else {
+		@warn '#{ $mode } 는 정의되지 않은 모드 입니다.';
+		@return $number;
+	}
+}

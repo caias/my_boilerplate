@@ -1,37 +1,43 @@
+%input-figure{
+	@include radius(0);
+	@include vtext($input-height, $input-height - 2px);
+	@include bd($input-border-color);
+	background-color: $input-background-color;
+	font-family: $input-font-family;
+	font-size: $font-size-base;
+	color: $input-font-color;
+	vertical-align: middle;
+}
+
 input[type=text],
 input[type=password]{
-  @include radius(0);
-  @include vtext(34px, 32);
-  border: 1px solid color(black, 3);
-  box-sizing: border-box;
-  vertical-align: middle;
-  padding: 0 10px;
-  color: color(black, 2);
-  background-color: color(white, 1);
+	@extend %input-figure;
 }
 
 select{
-  @include vtext(40px);
-  @include radius(0);
-	border: 1px solid color(black, 3);
-  box-sizing: border-box;
-  vertical-align: middle;
-  padding-left: 10px;
-  color: color(black, 1);
-  background-color: color(white, 1);
+	@extend %input-figure;
+}
+
+input[type="text"]:disabled,
+select:disabled,
+input[readonly="readonly"],
+textarea[readonly="readonly"],{
+	border-color: $input-disable-border-color;
+	background-color: $input-disable-background-color;
+	color: $input-disable-font-color;
 }
 
 input[type=text]:-ms-clear {
-  display: none !important;
+	display: none !important;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: color(black, 2) !important;
+	color: $input-placeholder-font-color !important;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: color(black, 2) !important;
+	color: $input-placeholder-font-color !important;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: color(black, 2) !important;
+	color: $input-placeholder-font-color !important;
 }
 
 label{
@@ -39,9 +45,4 @@ label{
 	cursor: pointer;
   position: relative;
   vertical-align: middle;
-}
-
-input[type="radio"],
-input[type="checkbox"]{
-  display: none;
 }
