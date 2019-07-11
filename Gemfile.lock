@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ffi (1.9.25)
+    ffi (1.9.25-x64-mingw32)
     hologram (1.4.0)
       redcarpet (>= 2.2, < 4.0)
       rouge (>= 1.5)
@@ -22,10 +23,11 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   hologram (~> 1.4.0)
   scss_lint (~> 0.56.0)
 
 BUNDLED WITH
-   1.16.3
+   1.16.4

@@ -43,5 +43,8 @@
     "hologram-github-theme": "0.1.4",
     "sassdoc": "2.5.0",
     "vinyl-buffer": "1.0.1"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.0.1"
   }
 }
