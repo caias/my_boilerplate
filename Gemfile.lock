@@ -6,7 +6,7 @@ GEM
     hologram (1.4.0)
       redcarpet (>= 2.2, < 4.0)
       rouge (>= 1.5)
-    rake (12.3.1)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
