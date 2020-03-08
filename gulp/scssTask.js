@@ -12,18 +12,17 @@ module.exports = (gulp, $, config) => {
 
 	const onError = (err) => {
 		if (err) {
-			let exitCode = 1;
-			console.log(colors.red('[ERROR]'), 'gulp build task failed', err);
-			console.log(colors.red('[FAIL]'), 'gulp build task failed - exiting with code ' + exitCode);
-			return process.exit(exitCode);
+			isProduction ? console.log(colors.red('[FAIL]'), 'gulp build task failed - exiting with code ' + exitCode) 
+				:	console.log(colors.red('[ERROR]'), 'gulp build task failed', err);
+			return process.exit(1);
 		}
 		//throw new Error(colors.green("info") + '::' + err);
 	};
 
 	function sass() {
 		return gulp
-			.src(config.scss.src)
-			.pipe($.wait(1000))
+			.src(config.scss.src, { since: gulp.lastRun(sass) })
+			// .pipe($.wait(1000))
 			.pipe($.sassGlob())
 			.pipe($.if(!isProduction, $.sourcemaps.init()))
 			.pipe($.plumber({errorHandler: isProduction ? false : true}))

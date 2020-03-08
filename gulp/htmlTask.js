@@ -10,15 +10,15 @@ const log = require('fancy-log'),
  */
 module.exports = (gulp, $, config) => {
 
-	function htmllintReporter(filepath, issues) {
-		if (issues.length > 0) {
-			issues.forEach(function(issue) {
-				log(colors.cyan('[htmllint-report] ') + colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ') + colors.red('(' + issue.code + ') ') + colors.yellow(issue.msg));
-			});
+	// function htmllintReporter (filepath, issues) {
+	// 	if (issues.length > 0) {
+	// 		issues.forEach(function(issue) {
+	// 			log(colors.cyan('[htmllint-report] ') + colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ') + colors.red('(' + issue.code + ') ') + colors.yellow(issue.msg));
+	// 		});
 
-			process.exitCode = 1;
-		}
-	}
+	// 		process.exitCode = 1;
+	// 	}
+	// }
 
 	function html() {
 		return gulp
@@ -28,10 +28,10 @@ module.exports = (gulp, $, config) => {
 					console.log('html Task 수행중 에러가 발생했습니다.');
 				}
 			}))
-			.pipe($.htmllint({
-				config: config.lint.html,
-				failOnError: isProduction ? true : false
-			}, htmllintReporter))
+			// .pipe($.htmllint({
+			// 	config: config.lint.html,
+			// 	failOnError: isProduction ? true : false
+			// }, htmllintReporter))
 			.pipe(gulp.dest(config.html.dest))
 			.pipe(browserSync.stream());
 	}

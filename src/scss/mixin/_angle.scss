@@ -37,7 +37,7 @@
 ///    }
 ///
 
-@mixin ic-angle($direction: "down", $width: 14px, $height: 7px, $color: #222, $right: null, $left: null, $hover: null, $active: false,  $thick: 1px) {
+@mixin ic-angle($direction: "down", $width: 14px, $height: 7px, $color: #222, $right: null, $left: null, $hover: null, $active: false, $thick: 1px) {
 
   $angle-default-css: (
     content: "",

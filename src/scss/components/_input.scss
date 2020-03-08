@@ -21,7 +21,7 @@ select{
 input[type="text"]:disabled,
 select:disabled,
 input[readonly="readonly"],
-textarea[readonly="readonly"],{
+textarea[readonly="readonly"]{
 	border-color: $input-disable-border-color;
 	background-color: $input-disable-background-color;
 	color: $input-disable-font-color;
